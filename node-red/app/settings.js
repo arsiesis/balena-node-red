@@ -189,13 +189,13 @@ module.exports = {
     //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
     editorTheme: {
         page: {
-            title: "balena Node-RED",
+            title: process.env.TITRE,
             favicon: "/usr/src/app/assets/favicon.ico"
         },
         header: {
-            title: "balena Node-RED",
+            title: process.env.TITRE,
             image: "/usr/src/app/assets/logo.png", // or null to remove image
-            url: "https://balena.io"
+            url: process.env.TITRE_URL
         },
         login: {
             image: "/usr/src/app/assets/logo.png" // a 256x256 image
@@ -212,7 +212,7 @@ module.exports = {
             // info - record information about the general running of the application + warn + error + fatal errors
             // debug - record information which is more verbose than info + info + warn + error + fatal errors
             // trace - record very detailed logging + debug + info + warn + error + fatal errors
-            level: "info",
+            level: process.env.CONSOLE_LOG,
             // Whether or not to include metric events in the log output
             metrics: false,
             // Whether or not to include audit events in the log output
