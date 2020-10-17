@@ -1,2 +1,4 @@
 applicationEnvironmentVariables:
   - PORT: 80
+  - USERNAME: "test"
+  - PASSWORD: "$2b$10$.MKw4NKf1c/lrQIAMc.XpeZliOZPXDIjd6EZ0PgnBBTxjNaTmhtOa"
