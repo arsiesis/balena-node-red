@@ -110,7 +110,7 @@ module.exports = {
             permissions: "*"
         }],
         default: {
-            permissions: "read"
+            permissions: "read"                      // A SUPPRIMER pour empecher la lecture sans le code ?!
         }
     },
 
