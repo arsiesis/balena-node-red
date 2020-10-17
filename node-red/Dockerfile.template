@@ -22,6 +22,7 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-sonospollytts \
        node-red-contrib-tasmota \
        node-red-contrib-aedes \
+       node-red-contrib-loxone \
        node-red-contrib-ngrok
 
 ###
