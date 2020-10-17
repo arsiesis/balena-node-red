@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# enable 1wire 
+# modprobe w1-gpio && modprobe w1-therm
+
 # Make the default flows available in the user library
 mkdir -p /data/node-red/user/lib/flows || true
 cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
