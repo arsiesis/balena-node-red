@@ -2,3 +2,7 @@ applicationEnvironmentVariables:
   - PORT: 80
   - USERNAME: "test"
   - PASSWORD: "$2b$10$.MKw4NKf1c/lrQIAMc.XpeZliOZPXDIjd6EZ0PgnBBTxjNaTmhtOa"
+  - credentialSecret: "test"
+  - TITRE: "Nodered"
+  - TITRE_URL: "https://flows.nodered.org"
+  - CONSOLE_LOG: "info"
