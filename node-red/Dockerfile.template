@@ -23,7 +23,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-tasmota \
        node-red-contrib-aedes \
        node-red-contrib-loxone \
-       node-red-contrib-ngrok
+       node-red-contrib-ngrok \
+       node-red-contrib-camerapi
 
 ###
 # Runtime image
@@ -35,7 +36,12 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   python-dev \
   python-rpi.gpio \
   libatomic1 \
+  python-picamera \
+  python3-picamera \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
+  
+# Enable the v4l2 driver for the Raspberry Pi camera
+RUN printf "bcm2835-v4l2\n" >> /etc/modules
 
 # Defines our working directory in container
 WORKDIR /usr/src/app
