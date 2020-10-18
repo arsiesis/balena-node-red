@@ -40,6 +40,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   python-picamera \
   python3-picamera \
   gstreamer-1.0 \
+  gstreamer1.0-tools \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
   
 # Enable the v4l2 driver for the Raspberry Pi camera
