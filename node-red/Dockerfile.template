@@ -25,7 +25,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-loxone \
        node-red-contrib-ngrok \
        node-red-contrib-camerapi \
-       node-red-contrib-image-tools
+       node-red-contrib-image-tools \
+       node-red-contrib-sun-position
 
 ###
 # Runtime image
