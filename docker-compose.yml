@@ -4,6 +4,8 @@ volumes:
 services:
   node-red:
     build: ./node-red
+    environment:
+      - UDEV=1
     volumes:
       - 'resin-data:/data'
     restart: always
