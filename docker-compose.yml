@@ -18,7 +18,7 @@ services:
       - "/dev/gpiomem:/dev/gpiomem"
       - "/dev/i2c-1:/dev/i2c-1"
       - "/dev/i2c-0:/dev/i2c-0"
-      - "/dev/bus/usb:/dev/bus/usb"
+      - "/dev/bus/hidraw0:/dev/bus/hidraw0"
     ports:
       - 80:80
       - 1883:1883
