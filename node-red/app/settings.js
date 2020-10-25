@@ -109,9 +109,6 @@ module.exports = {
             password: process.env.PASSWORD,
             permissions: "*"
         }],
-        default: {
-            permissions: "read"                      // A SUPPRIMER pour empecher la lecture sans le code ?!
-        }
     },
 
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
