@@ -20,10 +20,12 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-match \
        node-red-contrib-boolean-logic-ultimate \
        node-red-contrib-sonospollytts \
-       node-red-contrib-tasmota \
-       node-red-contrib-aedes \
+       #node-red-contrib-tasmota \
+       #node-red-contrib-aedes \
        node-red-contrib-loxone \
-       node-red-contrib-ngrok \
+       #node-red-contrib-ngrok \
+       #node-red-contrib-screenshot \
+       #node-red-contrib-buffer-parser\
        node-red-contrib-camerapi \
        node-red-contrib-image-tools \
        node-red-contrib-sun-position \
