@@ -27,6 +27,7 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-screenshot \
        #node-red-contrib-buffer-parser\
        #node-red-contrib-discord \
+       node-red-contrib-string \
        node-red-contrib-camerapi \
        node-red-contrib-image-tools \
        node-red-contrib-sun-position \
