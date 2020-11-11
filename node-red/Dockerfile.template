@@ -31,6 +31,12 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-camerapi \
        node-red-contrib-image-tools \
        node-red-contrib-sun-position \
+       node-red-contrib-ads1x15 \
+       ncd-red-ads1115 \
+       node-red-contrib-dac6573 \
+       node-red-contrib-mcp23017chip \
+       node-red-node-smooth \
+       node-red-node-base64 \
        node-red-contrib-ip
 
 ###
