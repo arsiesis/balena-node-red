@@ -11,4 +11,4 @@ applicationConfigVariables:
   - BALENA_HOST_CONFIG_gpu_mem_256: 192
   - BALENA_HOST_CONFIG_gpu_mem_512: 256
   - BALENA_HOST_CONFIG_gpu_mem_1024: 448
-  - BALENA_HOST_CONFIG_dtoverlay: "i2c-gpio,bus=4","i2c_gpio_delay_us=1","i2c_gpio_sda=23","i2c_gpio_scl=24"
+  - BALENA_HOST_CONFIG_dtoverlay: "i2c-gpio,bus=4,i2c_gpio_delay_us=1,i2c_gpio_sda=23,i2c_gpio_scl=24"
