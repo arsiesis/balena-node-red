@@ -37,6 +37,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-mcp23017chip \
        node-red-node-smooth \
        node-red-node-base64 \
+	   node-red-contrib-i2c \
+	   node-red-contrib-bigtimer \
        node-red-contrib-ip
 
 ###
