@@ -23,6 +23,7 @@ services:
       - "/dev/i2c-1:/dev/i2c-1"
       - "/dev/i2c-0:/dev/i2c-0"
       - "/dev/i2c-4:/dev/i2c-4"
+      - "/dev/ttyACM0:/dev/ttyACM0"
       - "/dev/input/by-path/:/dev/input/by-path/"
     ports:
       - 80:80
