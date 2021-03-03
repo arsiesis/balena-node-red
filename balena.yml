@@ -14,7 +14,7 @@ data:
   applicationEnvironmentVariables:
     - SOUND_VOLUME: 75
     - AUDIO_OUTPUT: 'AUTO'
-  defaultDeviceType: "raspberry-pi"
+  defaultDeviceType: "raspberry-pi2"
   supportedDeviceTypes:
     - "raspberry-pi"
     - "raspberry-pi2"
