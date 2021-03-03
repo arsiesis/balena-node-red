@@ -1,0 +1,30 @@
+#1   Modifier le fichier node-red\Dockerfile.raspberrypi4-64 pour inclure nos besoins
+#2   Reussir à installer un noeud depuis un GIT https://github.com/arsiesis/node-red-contrib-dobaos  (ne donctionne pas en local... est ce que cela fonctionnerai en live )
+#    npm install git+https://github.com/arsiesis/node-red-contrib-dobaos.git
+#3   installer tout les autres noeud perso
+#4   
+#5   
+#6   
+#7   
+#8   
+#9   
+#10   
+#11  
+#12  
+#13  
+#14  cree une option pour activer le mot de pass sur la dashboard
+#https://nodered.org/docs/user-guide/runtime/securing-node-red#generating-the-password-hash
+#15  
+#16  activer le https et utiliser un certificat let's encrypt ?
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
