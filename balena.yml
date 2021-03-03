@@ -16,6 +16,9 @@ data:
     - USERNAME: 'test'
     - PASSWORD: "$2b$10$.MKw4NKf1c/lrQIAMc.XpeZliOZPXDIjd6EZ0PgnBBTxjNaTmhtOa"
     - CONSOLE_LOG: 'info'
+  applicationConfigVariables:
+      - BALENA_HOST_CONFIG_dtparam: "\"i2c_arm=on\",\"spi=on\",\"audio=on\""
+      - BALENA_HOST_CONFIG_dtoverlay: "\"i2c-gpio,bus=4,i2c_gpio_delay_us=1,i2c_gpio_sda=23,i2c_gpio_scl=24\""
   defaultDeviceType: "raspberry-pi2"
   supportedDeviceTypes:
     - "raspberry-pi"
