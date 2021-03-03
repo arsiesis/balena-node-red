@@ -22,6 +22,7 @@ services:
       - "/dev/gpiomem:/dev/gpiomem"
       - "/dev/i2c-1:/dev/i2c-1"
       - "/dev/i2c-0:/dev/i2c-0"
+      - "/dev/i2c-4:/dev/i2c-4"
       - "/dev/input/by-path/:/dev/input/by-path/"
     ports:
       - 80:80
