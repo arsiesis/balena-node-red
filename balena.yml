@@ -5,13 +5,13 @@ assets:
   repository:
     type: "blob.asset"
     data:
-      url: "https://github.com/arsiesis/balena-node-red"
+        url: "https://github.com/arsiesis/balena-node-red"
   logo:
     type: "blob.asset"
     data:
-      url: "https://raw.githubusercontent.com/arsiesis/balena-node-red/75a25ef89a6dfef0fab428e9a0b9ac5bc4ddfc5b/logo.png"
+        url: "https://raw.githubusercontent.com/arsiesis/balena-node-red/75a25ef89a6dfef0fab428e9a0b9ac5bc4ddfc5b/logo.png"
 data:
-  applicationEnvironmentVariables:
+    applicationEnvironmentVariables:
       - PORT: 80
       - USERNAME: "test"
       - PASSWORD: "$2b$10$.MKw4NKf1c/lrQIAMc.XpeZliOZPXDIjd6EZ0PgnBBTxjNaTmhtOa"
@@ -19,7 +19,7 @@ data:
       - TITRE: "Nodered"
       - TITRE_URL: "https://flows.nodered.org"
       - CONSOLE_LOG: "info"
-  applicationConfigVariables:
+    applicationConfigVariables:
       - BALENA_HOST_CONFIG_start_x: 1
       - BALENA_HOST_CONFIG_gpu_mem: 128
       - BALENA_HOST_CONFIG_gpu_mem_256: 192
@@ -27,8 +27,8 @@ data:
       - BALENA_HOST_CONFIG_gpu_mem_1024: 448
       - BALENA_HOST_CONFIG_dtparam: "\"i2c_arm=on\",\"spi=on\",\"audio=on\""
       - BALENA_HOST_CONFIG_dtoverlay: "\"i2c-gpio,bus=4,i2c_gpio_delay_us=1,i2c_gpio_sda=23,i2c_gpio_scl=24\""
-  defaultDeviceType: "raspberrypi2"
-  supportedDeviceTypes:
+    defaultDeviceType: "raspberrypi2"
+    supportedDeviceTypes:
     - "raspberry-pi"
     - "raspberry-pi2"
     - "raspberrypi3"
