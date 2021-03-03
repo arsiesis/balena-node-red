@@ -185,6 +185,9 @@ module.exports = {
     // If not set, the following default order is used:
     //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
     editorTheme: {
+		projects: {
+            enabled: true
+        },
         page: {
             title: process.env.TITRE,
             favicon: "/usr/src/app/assets/favicon.ico"
