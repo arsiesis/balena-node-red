@@ -1,15 +1,15 @@
-name: "balenaSound"
+name: "NodeRED_Simu"
 type: "sw.application"
-description: "Build a single or multi-room streamer for an existing audio device using a Raspberry Pi! Supports Bluetooth, Airplay and Spotify Connect"
+description: "Node-RED"
 assets:
   repository:
     type: "blob.asset"
     data:
-      url: "https://github.com/balenalabs/balena-sound"
+        url: "https://github.com/arsiesis/balena-node-red"
   logo:
     type: "blob.asset"
     data:
-      url: "https://raw.githubusercontent.com/balenalabs/balena-sound/master/logo.png"
+        url: "https://raw.githubusercontent.com/arsiesis/balena-node-red/75a25ef89a6dfef0fab428e9a0b9ac5bc4ddfc5b/logo.png"
 data:
   applicationEnvironmentVariables:
     - PORT: 80
