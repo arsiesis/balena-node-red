@@ -14,7 +14,7 @@ data:
   applicationEnvironmentVariables:
     - PORT: 80
     - USERNAME: 'test'
-    - TITRE: 'Nodered'
+    - PASSWORD: "$2b$10$.MKw4NKf1c/lrQIAMc.XpeZliOZPXDIjd6EZ0PgnBBTxjNaTmhtOa"
     - CONSOLE_LOG: 'info'
   defaultDeviceType: "raspberry-pi2"
   supportedDeviceTypes:
