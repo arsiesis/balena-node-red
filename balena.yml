@@ -1,22 +1,24 @@
-name: "NodeRED_Simu"
+name: "balenaSound"
 type: "sw.application"
-description: "Node-RED with bundled Mosquitto Broker"
+description: "Build a single or multi-room streamer for an existing audio device using a Raspberry Pi! Supports Bluetooth, Airplay and Spotify Connect"
 assets:
   repository:
     type: "blob.asset"
     data:
-        url: "https://github.com/arsiesis/balena-node-red"
+      url: "https://github.com/balenalabs/balena-sound"
   logo:
     type: "blob.asset"
     data:
-        url: "https://raw.githubusercontent.com/arsiesis/balena-node-red/75a25ef89a6dfef0fab428e9a0b9ac5bc4ddfc5b/logo.png"
+      url: "https://raw.githubusercontent.com/balenalabs/balena-sound/master/logo.png"
 data:
-    applicationEnvironmentVariables:
-      - PORT: 80
-    defaultDeviceType: "raspberry-pi2"
-    supportedDeviceTypes:
+  applicationEnvironmentVariables:
+    - SOUND_VOLUME: 75
+    - AUDIO_OUTPUT: 'AUTO'
+  defaultDeviceType: "raspberry-pi"
+  supportedDeviceTypes:
     - "raspberry-pi"
     - "raspberry-pi2"
     - "raspberrypi3"
-    - "raspberrypi3-64"
     - "raspberrypi4-64"
+    - "fincm3"
+    - "intel-nuc"
