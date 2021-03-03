@@ -12,8 +12,6 @@ assets:
       url: "https://raw.githubusercontent.com/balenalabs/balena-sound/master/logo.png"
 data:
   applicationEnvironmentVariables:
-    - SOUND_VOLUME: 75
-    - AUDIO_OUTPUT: 'AUTO'
     - PORT: 80
     - USERNAME: 'test'
     - TITRE: 'Nodered'
