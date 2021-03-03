@@ -16,9 +16,7 @@ data:
     - AUDIO_OUTPUT: 'AUTO'
     - PORT: 80
     - USERNAME: 'test'
-    - CREDENTIALSECRET: 'credentialSecret'
     - TITRE: 'Nodered'
-    - TITRE_URL: 'https://flows.nodered.org'
     - CONSOLE_LOG: 'info'
   defaultDeviceType: "raspberry-pi2"
   supportedDeviceTypes:
