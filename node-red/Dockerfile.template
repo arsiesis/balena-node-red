@@ -41,6 +41,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
 	   node-red-contrib-bigtimer \
 	   node-red-contrib-persist \
 	   node-red-contrib-moment \
+	   node-red-node-serialport \
+	   node-red-contrib-serialport-rs485 \
        node-red-contrib-ip
 
 ###
