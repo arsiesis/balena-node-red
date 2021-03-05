@@ -14,7 +14,7 @@ data:
   applicationEnvironmentVariables:
     - PORT: 80
     - USERNAME: 'test'
-    - PASSWORD: "$2b$10$.MKw4NKf1c/lrQIAMc.XpeZliOZPXDIjd6EZ0PgnBBTxjNaTmhtOa"
+    - PASSWORD: "$2b$08$hKNRG3SOOtmifcUotJoL7.4C9SYrxOY7PdCTGRo8gPB8Quk7htfBy"  #node-red-admin hash-pw         
     - CONSOLE_LOG: 'info'
     - CREDENTIALSECRET: "credentialSecret"
     - TITRE: 'Nodered'
