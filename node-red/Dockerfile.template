@@ -47,6 +47,11 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-persist \
        node-red-contrib-moment \
        node-red-node-serialport \
+       node-red-contrib-alarm \
+       node-red-contrib-ui-multistate-switch \
+       node-red-contrib-nbrowser \
+       node-red-contrib-string \
+       #dobaos/node-red-contrib-dobaos
        node-red-contrib-ip
 
 ###

@@ -10,13 +10,14 @@
 #9   
 #10   
 #11  
-#12  
+#12   utiliser la fonction projet (il faut installer GIT)
+#     https://nodered.org/docs/user-guide/projects/
 #13  
 #14  cree une option pour activer le mot de pass sur la dashboard
-#https://nodered.org/docs/user-guide/runtime/securing-node-red#generating-the-password-hash
+#    https://nodered.org/docs/user-guide/runtime/securing-node-red#generating-the-password-hash
 #15  
 #16  activer le https et utiliser un certificat let's encrypt ?
-#
+#    https://nodered.org/docs/user-guide/runtime/securing-node-red
 #
 #
 #

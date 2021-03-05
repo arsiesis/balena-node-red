@@ -1,0 +1,152 @@
+[
+    {
+        "id": "260427a9.a26ec8",
+        "type": "inject",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "test",
+        "payloadType": "str",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "facb5150.854068"
+            ]
+        ]
+    },
+    {
+        "id": "15f10129.0886c7",
+        "type": "http response",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 900,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "604f744b.b9c9c4",
+        "type": "http in",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "url": "/keyboard",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "e383050e.ef1a58"
+            ]
+        ]
+    },
+    {
+        "id": "e383050e.ef1a58",
+        "type": "template",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "plain",
+        "template": "<html>\n    <body>\n        \n         <h1>Please press any key</h1>\n         <div id=\"log\"></div>\n         \n         <script>\n         \n            var socket = new WebSocket(`ws://${document.location.host}/ws/keyboard`);\n            \n            function log(msg) {\n                document.getElementById(\"log\").insertAdjacentHTML('afterbegin', `<li>${msg}</li>`);\n            }\n             \n            socket.onopen = function () {\n                log(\"Connection opened\");\n            };\n            socket.onerror = function (errorEvent) {\n                log(\"Error! Connection closed\");\n            };\n            \n            document.addEventListener('keypress', function(evt) {\n                log(`Sending [${evt.key}]`)\n                socket.send(evt.key);\n            });\n            \n             \n         </script>\n         \n    </body>\n</html>",
+        "output": "str",
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "15f10129.0886c7"
+            ]
+        ]
+    },
+    {
+        "id": "facb5150.854068",
+        "type": "websocket out",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "server": "",
+        "client": "6a47cd6.209cd34",
+        "x": 490,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ec3ab0d6.7f8b58",
+        "type": "comment",
+        "z": "f20eac18.78e768",
+        "name": "test the websocket connection",
+        "info": "",
+        "x": 230,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "dc620ddb.ed1508",
+        "type": "comment",
+        "z": "f20eac18.78e768",
+        "name": "website sending keystrokes",
+        "info": "<http://localhost:1880/keyboard>",
+        "x": 220,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9e49a041.ef83b8",
+        "type": "debug",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "983794df.782d58",
+        "type": "websocket in",
+        "z": "f20eac18.78e768",
+        "name": "",
+        "server": "15eb5b0d.fb9095",
+        "client": "",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "9e49a041.ef83b8"
+            ]
+        ]
+    },
+    {
+        "id": "17f897dd.dcef1",
+        "type": "comment",
+        "z": "f20eac18.78e768",
+        "name": "receive keystrokes via websocket",
+        "info": "",
+        "x": 230,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6a47cd6.209cd34",
+        "type": "websocket-client",
+        "path": "ws://localhost:1880/ws/keyboard",
+        "tls": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "15eb5b0d.fb9095",
+        "type": "websocket-listener",
+        "path": "/ws/keyboard",
+        "wholemsg": "false"
+    }
+]
