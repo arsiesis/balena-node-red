@@ -14,11 +14,12 @@ data:
   applicationEnvironmentVariables:
     - PORT: 80
     - USERNAME: 'test'
-    - PASSWORD: "$2b$08$hKNRG3SOOtmifcUotJoL7.4C9SYrxOY7PdCTGRo8gPB8Quk7htfBy"       
+    - PASSWORD: "$2b$08$hKNRG3SOOtmifcUotJoL7.4C9SYrxOY7PdCTGRo8gPB8Quk7htfBy"  #node-red-admin hash-pw         
     - CONSOLE_LOG: 'info'
     - CREDENTIALSECRET: "credentialSecret"
     - TITRE: 'Nodered'
     - TITRE_URL: 'https://flows.nodered.org'
+    - SCP_PASSWORD: 'test'
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_start_x: 1
     - BALENA_HOST_CONFIG_gpu_mem: 128
