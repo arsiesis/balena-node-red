@@ -51,6 +51,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-ui-multistate-switch \
        node-red-contrib-nbrowser \
        node-red-contrib-string \
+       node-red-contrib-blockly \
+       node-red-contrib-smartmeter \
        #dobaos/node-red-contrib-dobaos
        node-red-contrib-ip
 
