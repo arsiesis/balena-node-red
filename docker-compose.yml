@@ -9,8 +9,6 @@ services:
       - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
     volumes:
       - 'resin-data:/data'
-      - serverfiles:/usr/src/serverfiles
-      - servercache:/servercache
     restart: always
     privileged: true
     network_mode: host
@@ -33,19 +31,3 @@ services:
       - 1400:1400
       - 1880:1880
       - 1980:1880
-  scp-server:
-    network_mode: host
-    restart: always
-    build: ./scp-server
-    privileged: false
-    labels:
-      io.balena.features.dbus: 1
-    volumes:
-      - serverfiles:/serverfiles
-      - servercache:/servercache
-    ports:
-      - "22:22/udp"
-      - "22:22/tcp"
-Volumes:  
-  serverfiles:
-  servercache:
