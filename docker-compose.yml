@@ -4,6 +4,9 @@ volumes:
     resin-data:
     # Define your own volumes or reuse existing ones if your are in a multicontainer setup
     #volume_homeassistant:
+    nodered_working_dir:
+    node_modules:
+
 services:
   node-red:
     build: ./node-red
@@ -11,7 +14,9 @@ services:
       - UDEV=1
       - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
     volumes:
-      - 'resin-data:/data'
+      - resin-data:/data
+      - nodered_working_dir:/usr/src/app
+      - node_modules:/usr/local/lib/node_modules
     restart: always
     privileged: true
     network_mode: host
@@ -44,6 +49,8 @@ services:
       io.balena.features.dbus: 1
     volumes:
       - resin-data:/data
+      - nodered_working_dir:/usr/src/app
+      - node_modules:/usr/local/lib/node_modules
     ports:
       - "22:22/udp"
       - "22:22/tcp"  
