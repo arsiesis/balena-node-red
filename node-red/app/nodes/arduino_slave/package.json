@@ -11,7 +11,7 @@
 
   "node-red" : {
     "nodes" : {
-      "mcp_custom" : "arduino_slave.js"
+      "arduino_slave" : "arduino_slave.js"
     }
   }
 }

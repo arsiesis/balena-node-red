@@ -11,7 +11,7 @@
 
   "node-red" : {
     "nodes" : {
-      "mcp_custom" : "ad5242.js"
+      "ad5242" : "ad5242.js"
     }
   }
 }
