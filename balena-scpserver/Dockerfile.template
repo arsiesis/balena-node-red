@@ -1,0 +1,5 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%:latest
+RUN install_packages openssh-server
+WORKDIR scripts
+COPY scripts/. .
+CMD [ "/bin/bash", "start.sh" ]

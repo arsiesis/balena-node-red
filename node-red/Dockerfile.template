@@ -54,6 +54,7 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-contrib-filebrowser \
        node-red-contrib-blockly \
        node-red-contrib-smartmeter \
+       node-red-contrib-letsencrypt \
        #dobaos/node-red-contrib-dobaos
        node-red-contrib-ip
 

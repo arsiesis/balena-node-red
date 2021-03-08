@@ -1,6 +1,9 @@
 version: '2'
+# version: '2.1'
 volumes:
     resin-data:
+    # Define your own volumes or reuse existing ones if your are in a multicontainer setup
+    #volume_homeassistant:
 services:
   node-red:
     build: ./node-red
@@ -31,3 +34,16 @@ services:
       - 1400:1400
       - 1880:1880
       - 1980:1880
+  scp-server:
+    network_mode: host
+    restart: always
+    build:
+      context: ./balena-scpserver
+    privileged: false
+    labels:
+      io.balena.features.dbus: 1
+    volumes:
+      - resin-data:/data
+    ports:
+      - "22:22/udp"
+      - "22:22/tcp"  
