@@ -1,0 +1,17 @@
+{
+  "name": "ad5242",
+  "version": "1.0.0",
+  "description": "This is a customized code for the ad5242",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "author": "CedgameST",
+  "license": "ISC",
+
+  "node-red" : {
+    "nodes" : {
+      "mcp_custom" : "ad5242.js"
+    }
+  }
+}

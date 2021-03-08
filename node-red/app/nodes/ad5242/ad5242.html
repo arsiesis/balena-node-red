@@ -1,0 +1,71 @@
+ <script type="text/javascript">
+RED.nodes.registerType('ad5242',{
+	category: 'ad5242',
+	color: '#ff5050',
+	defaults: {
+	    res: {value:"10000", required: true},
+        addr: {value:"0x2C", required: true},
+        channel: {value:"0", required: true},
+        i2c: {value:"i2c-0", required: true},
+		name: {value:""},
+	},
+	inputs:1,
+    outputs:1,
+	icon: "file.png",
+	label: function() {
+		return this.name||"ad5242";
+	}
+});
+</script>
+
+
+<script type="text/x-red" data-template-name="ad5242">
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+
+	<div class="form-row">
+		<label for="node-config-input-addr"><i class="icon-bookmark"></i> Resistor value</label>
+		<select type="text" id="node-input-res" style="width:70px;">
+            <option value="10000">10k</option>
+            <option value="100000">100k</option>
+            <option value="1000000">1M</option>
+        </select>
+	</div>
+
+	<div class="form-row">
+		<label for="node-config-input-addr"><i class="icon-bookmark"></i> Address</label>
+		<select type="text" id="node-input-addr" style="width:70px;">
+            <option value="0x2C">0x2C</option>
+            <option value="0x2D">0x2D</option>
+            <option value="0x2E">0x2E</option>
+            <option value="0x2F">0x2F</option>
+        </select>
+	</div>
+
+    <div class="form-row">
+		<label for="node-config-input-i2c"><i class="icon-bookmark"></i> I²C</label>
+		<select type="number" id="node-input-i2c" style="width:70px;">
+            <option value="0">i2c-0</option>
+            <option value="1">i2c-1</option>
+            <option value="2">i2c-2</option>
+        </select>
+	</div>
+
+	<div class="form-row">
+		<label for="node-config-input-channel"><i class="icon-bookmark"></i> Channel</label>
+		<select type="number" id="node-input-channel" style="width:70px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+
+        </select>
+	</div
+
+</script>
+
+<script type="text/x-red" data-help-name="ad5242">
+	<p>Envoie une valeur de resistance à l'AD5242.</p>
+	<p>La valeur doit être comprise entre 0 et la valeur de la résistance</p>
+</script>
+

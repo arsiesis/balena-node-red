@@ -1,0 +1,45 @@
+ <script type="text/javascript">
+RED.nodes.registerType('arduino_slave',{
+	category: 'arduino',
+	color: '#95b6ff',
+	defaults: {
+        name: {value:""},
+        i2c: {value:"i2c-0", required: true},
+        addr: {value:"0x10", required: true},
+	},
+	inputs:1,
+    outputs:8,
+	icon: "file.png",
+	label: function() {
+		return this.name||"arduino_slave";
+	}
+});
+</script>
+
+
+<script type="text/x-red" data-template-name="arduino_slave">
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+
+	<div class="form-row">
+		<label for="node-config-input-addr"><i class="icon-bookmark"></i> Address</label>
+		<input type="text" id="node-input-addr" placeholder="Adrress">
+	</div>
+
+    <div class="form-row">
+		<label for="node-config-input-i2c"><i class="icon-bookmark"></i> I²C</label>
+		<select type="number" id="node-input-i2c" style="width:70px;">
+            <option value="0">i2c-0</option>
+            <option value="1">i2c-1</option>
+            <option value="2">i2c-2</option>
+        </select>
+	</div>
+
+</script>
+
+<script type="text/x-red" data-help-name="arduino_slave">
+	<p>Permet de demander un envoie de valeur à l'Arduino sur un bus I²C</p>
+</script>
+
