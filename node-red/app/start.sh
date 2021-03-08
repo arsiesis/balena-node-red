@@ -11,9 +11,9 @@ cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 mkdir -p /data/node-red/user/lib/functions || true
 cp /usr/src/app/functions/* /data/node-red/user/lib/functions/
 
-# Make personal node available
-mkdir -p /data/node-red/nodes || true
-cp /usr/src/app/nodes/* /data/node-red/nodes/
+# Make personal node available  >>> bug rend les noeuds persistant en cas de mise à jours il ne sont pas update
+#mkdir -p /data/node-red/nodes || true
+#cp -r /usr/src/app/nodes/* /data/node-red/nodes/
 
 # only copy the flow balena_flows.json if it doesn't exist as we don't want to overwrite any
 # changes made via the node-red editor.
