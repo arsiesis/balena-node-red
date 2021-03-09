@@ -15,7 +15,7 @@ else
     rm -rf /data/node-red/nodes
 fi
 mkdir -p /data/node-red/nodes || true
-cp -r /usr/src/app/nodes/ /data/node-red/nodes/
+cp -r /usr/src/app/nodes/ /data/node-red/
 # only copy the flow balena_flows.json if it doesn't exist as we don't want to overwrite any
 # changes made via the node-red editor.
 if [ ! -f /data/node-red/user/flows.json ]; then
