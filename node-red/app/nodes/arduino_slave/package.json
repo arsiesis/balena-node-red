@@ -1,5 +1,5 @@
 {
-  "name": "arduino_slave",
+  "name": "node-red-contrib-arduino_slave",
   "version": "1.0.0",
   "description": "This is a customized code for the ad5242",
   "main": "",
@@ -8,10 +8,12 @@
   },
   "author": "CedgameST",
   "license": "ISC",
-
-  "node-red" : {
-    "nodes" : {
-      "arduino_slave" : "arduino_slave.js"
+  "dependencies": {
+    "i2c-bus": "^5.2.1"
+  },
+  "node-red": {
+    "nodes": {
+      "arduino_slave": "arduino_slave.js"
     }
   }
 }

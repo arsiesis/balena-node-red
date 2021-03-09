@@ -1,5 +1,5 @@
 {
-  "name": "ad5242",
+  "name": "node-red-contrib-ad5242",
   "version": "1.0.0",
   "description": "This is a customized code for the ad5242",
   "main": "",
@@ -8,10 +8,12 @@
   },
   "author": "CedgameST",
   "license": "ISC",
-
-  "node-red" : {
-    "nodes" : {
-      "ad5242" : "ad5242.js"
+  "dependencies": {
+    "i2c-bus": "^5.2.1"
+  },
+  "node-red": {
+    "nodes": {
+      "ad5242": "ad5242.js"
     }
   }
 }

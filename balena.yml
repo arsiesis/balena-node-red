@@ -15,7 +15,7 @@ data:
     - PORT: 80
     - USERNAME: "test"
     - PASSWORD: "$2b$08$hKNRG3SOOtmifcUotJoL7.4C9SYrxOY7PdCTGRo8gPB8Quk7htfBy"  #node-red-admin hash-pw         
-    - CONSOLE_LOG: "info"
+    - CONSOLE_LOG: "trace"  # fatal < error < warn < info < debug < trace
     - CREDENTIALSECRET: "credentialSecret"
     - TITRE: "Nodered"
     - TITRE_URL: "https://flows.nodered.org"
