@@ -11,11 +11,12 @@ RUN echo 'Install node perso'
 RUN mkdir -p /usr/src/app/nodes || true
 COPY ./app/nodes/ /usr/src/app/nodes/
 
-RUN cd /usr/src/app/nodes/arduino_slave/
-RUN npm install --production --unsafe-perm
+RUN cd /usr/src/app/nodes/arduino_slave/ \ 
+npm install --production --unsafe-perm
+#RUN npm install --production --unsafe-perm
 
 RUN cd /usr/src/app/nodes/ad5242/
-RUN npm install --production --unsafe-perm
+RUN npm install --production --unsafe-perm /usr/src/app/nodes/ad5242/.
 
 RUN echo 'Install node publié sur npm'
 RUN JOBS=MAX npm install -g --production --unsafe-perm \
