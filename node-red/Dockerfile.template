@@ -7,13 +7,16 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   build-essential \  
   make \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN echo 'Install node perso'
+COPY ./app/nodes /usr/src/app/nodes
 
-COPY ./app/nodes /usr/local/lib/node_modules/
+RUN cd /usr/src/app/nodes/arduino_slave
+RUN npm install --production --unsafe-perm
 
-RUN JOBS=MAX npm install -g --production --unsafe-perm \
-      /usr/local/lib/node_modules/arduino_slave \
-      /usr/local/lib/node_modules/ad5242
+RUN cd /usr/src/app/nodes/ad5242
+RUN npm install --production --unsafe-perm
 
+RUN echo 'Install node publié sur npm'
 RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red \
        node-red-admin \
