@@ -60,7 +60,13 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-filebrowser \
        #node-red-contrib-blockly \
        #node-red-contrib-smartmeter \
-       #node-red-contrib-letsencrypt \
+       #node-red-contrib-letsencrypt \  # est sur github donc ne s'install pas avec cette commande.
+       #node-red-contrib-ui-camera-viewer \
+       #node-red-contrib-alexa-notification \
+       #node-red-contrib-ui-thermostat \
+       #node-red-contrib-ui-media-recorder \
+       #node-red-contrib-image-output \
+       #node-red-contrib-drawsvg \
        #dobaos/node-red-contrib-dobaos
        node-red-contrib-ip
 
