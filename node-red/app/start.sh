@@ -11,9 +11,15 @@ cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 mkdir -p /data/node-red/user/lib/functions || true
 cp /usr/src/app/functions/* /data/node-red/user/lib/functions/
 
+if [ ! -d /data/node-red/nodes ]; then
+    echo "Suppression des anciens noeuds"
+    rm -rf dirname /data/node-red/nodes
+else
+    echo "Pas encore de noeud perso..."
+fi
 # Make personal node available  >>> bug rend les noeuds persistant en cas de mise à jours il ne sont pas update
-#mkdir -p /data/node-red/nodes || true
-#cp -r /usr/src/app/nodes/* /data/node-red/nodes/
+mkdir -p /data/node-red/nodes || true
+cp -r /usr/src/app/nodes/* /data/node-red/nodes/
 
 # only copy the flow balena_flows.json if it doesn't exist as we don't want to overwrite any
 # changes made via the node-red editor.
