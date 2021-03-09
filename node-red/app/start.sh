@@ -7,15 +7,15 @@ cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 # Make the default functions available in the user library
 mkdir -p /data/node-red/user/lib/functions || true
 cp /usr/src/app/functions/* /data/node-red/user/lib/functions/
+# Make personal node available  >>> bug rend les noeuds persistant en cas de mise à jours il ne sont pas update
 if [ ! -d /data/node-red/nodes ]; then
     echo "Pas encore de noeud perso..."
 else
     echo "Suppression des anciens noeuds"
     rm -rf /data/node-red/nodes
 fi
-# Make personal node available  >>> bug rend les noeuds persistant en cas de mise à jours il ne sont pas update
 mkdir -p /data/node-red/nodes || true
-cp -r /usr/src/app/nodes/* /data/node-red/nodes/
+cp -r /usr/src/app/nodes/ /data/node-red/nodes/
 # only copy the flow balena_flows.json if it doesn't exist as we don't want to overwrite any
 # changes made via the node-red editor.
 if [ ! -f /data/node-red/user/flows.json ]; then
