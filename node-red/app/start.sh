@@ -12,11 +12,12 @@ mkdir -p /data/node-red/user/lib/functions || true
 cp /usr/src/app/functions/* /data/node-red/user/lib/functions/
 
 if [ ! -d /data/node-red/nodes ]; then
-    echo "Suppression des anciens noeuds"
-    rm -rf dirname /data/node-red/nodes
-else
     echo "Pas encore de noeud perso..."
+else
+    echo "Suppression des anciens noeuds"
+    rm -rf /data/node-red/nodes
 fi
+
 # Make personal node available  >>> bug rend les noeuds persistant en cas de mise à jours il ne sont pas update
 mkdir -p /data/node-red/nodes || true
 cp -r /usr/src/app/nodes/* /data/node-red/nodes/
