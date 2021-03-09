@@ -11,10 +11,10 @@ RUN echo 'Install node perso'
 RUN mkdir -p /usr/src/app/nodes || true
 COPY ./app/nodes/ /usr/src/app/nodes/
 
-RUN cd /usr/src/app/nodes/arduino_slave
+RUN cd /usr/src/app/nodes/arduino_slave/
 RUN npm install --production --unsafe-perm
 
-RUN cd /usr/src/app/nodes/ad5242
+RUN cd /usr/src/app/nodes/ad5242/
 RUN npm install --production --unsafe-perm
 
 RUN echo 'Install node publié sur npm'
@@ -106,7 +106,7 @@ COPY --from=build /usr/local/bin /usr/local/bin
 #copie des répertoire des noeuds installer en global
 COPY --from=build /usr/local/lib/node_modules /usr/local/lib/node_modules   
 #copie des répertoire des noeuds perso installer
-COPY --from=build /usr/src/app/nodes /usr/src/app/nodes   
+COPY --from=build /usr/src/app/nodes/. /usr/src/app/nodes   
 
 # This will copy all files in our root to the working  directory in the container
 COPY ./app ./
