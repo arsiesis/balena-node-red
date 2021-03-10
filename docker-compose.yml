@@ -1,7 +1,7 @@
 version: '2'
 # version: '2.1'
 volumes:
-    resin-data:
+    node-red-data:
     # Define your own volumes or reuse existing ones if your are in a multicontainer setup
     #volume_homeassistant:
     nodered_working_dir:
@@ -14,7 +14,7 @@ services:
       - UDEV=1  #active le hotplug des périphérique USB par ex mais il faut que privileged true soit déclarer aussi
       - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
     volumes:
-      - resin-data:/data
+      - node-red-data:/data
       - nodered_working_dir:/usr/src/app
       - node_modules:/usr/local/lib/node_modules
     restart: always
@@ -48,9 +48,21 @@ services:
     labels:
       io.balena.features.dbus: 1
     volumes:
-      - resin-data:/data
+      - node-red-data:/data
       - nodered_working_dir:/usr/src/app
       - node_modules:/usr/local/lib/node_modules
     ports:
       - "22:22/udp"
       - "22:22/tcp"  
+  samba:
+    #  hostname: samba  # doesn't work
+    image: dastrasmue/rpi-samba 
+    command:  -u "jan:passw0rd!67" -s "node-red-data:/mount/node-red-data:rw:jan"  
+    volumes:
+       - 'node-red-data:/mount/node-red-data'
+    ports:
+    #  - "137:137"
+    #  - "137:137/udp"
+      - "139:139"
+      - "445:445"
+    #  - "445:445/udp"
