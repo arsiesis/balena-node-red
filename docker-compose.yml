@@ -44,7 +44,7 @@ services:
     network_mode: host
     restart: always
     build:
-      context: ./balena-scpserver
+      context: ./scp-server
     privileged: false
     labels:
       io.balena.features.dbus: 1
