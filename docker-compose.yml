@@ -61,7 +61,7 @@ services:
     command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:jan"  -s "kodi-data:/mount/kodi-data:rw:cta"
     volumes:
        - 'node-red-data:/mount/node-red-data'
-       - 'kodi-data:/mount/kodi-data
+       - 'kodi-data:/mount/kodi-data'
     ports:
     #  - "137:137"
     #  - "137:137/udp"
