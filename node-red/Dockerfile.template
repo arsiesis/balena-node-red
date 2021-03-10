@@ -7,18 +7,10 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   build-essential \  
   make \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
-#RUN echo 'Install node perso'
-RUN mkdir -p /usr/src/app/nodes || true
-COPY ./app/nodes/ /usr/src/app/nodes/
-# Defines our working directory in container
-WORKDIR /usr/src/app/nodes/arduino_slave/
-RUN npm install --production --unsafe-perm
-# Defines our working directory in container
-WORKDIR /usr/src/app/nodes/ad5242/
-RUN npm install --production --unsafe-perm
-#RUN echo 'Install node publié sur npm'
+
 RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red \
+       i2c-bus \
        node-red-admin \
        #node-red-contrib-balena \
        node-red-node-pi-gpio \
@@ -73,6 +65,19 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #dobaos/node-red-contrib-dobaos
        node-red-contrib-ip
 
+
+
+
+#RUN echo 'Install node perso'
+RUN mkdir -p /usr/src/app/nodes || true
+COPY ./app/nodes/ /usr/src/app/nodes/
+# Defines our working directory in container
+WORKDIR /usr/src/app/nodes/arduino_slave/
+RUN npm install --production --unsafe-perm
+# Defines our working directory in container
+WORKDIR /usr/src/app/nodes/ad5242/
+RUN npm install --production --unsafe-perm
+#RUN echo 'Install node publié sur npm'
 ###
 # Runtime image
 ###
