@@ -24,6 +24,9 @@ services:
     labels:
       io.balena.features.supervisor-api: '1'
       io.balena.features.dbus: '1'
+      #???io.balena.features.kernel-modules: '1'
+    environment:
+      - TZ=Europe/Brussels
     cap_add:
       - SYS_RAWIO
     devices:
