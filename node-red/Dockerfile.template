@@ -15,16 +15,16 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-balena \
        node-red-node-pi-gpio \
        #node-red-contrib-clock-generator \
-       #node-red-contrib-knx-ultimate \
-       #node-red-contrib-sonos-plus \
+       node-red-contrib-knx-ultimate \
+       node-red-contrib-sonos-plus \
        node-red-dashboard \
        #node-red-contrib-cron-plus \
        #node-red-contrib-sun-position \
-       #node-red-contrib-presence-faker \
-       #node-red-contrib-ical-events \
+       node-red-contrib-presence-faker \
+       node-red-contrib-ical-events \
        #node-red-contrib-collector \
        #node-red-contrib-match \
-       #node-red-contrib-boolean-logic-ultimate \
+       node-red-contrib-boolean-logic-ultimate \
        #node-red-contrib-sonospollytts \
        #node-red-contrib-tasmota \
        node-red-contrib-aedes \
@@ -33,7 +33,7 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-screenshot \
        #node-red-contrib-buffer-parser\
        #node-red-contrib-discord \
-       #node-red-contrib-string \
+       node-red-contrib-string \
        #node-red-contrib-camerapi \
        #node-red-contrib-image-tools \
        #node-red-contrib-sun-position \
@@ -53,7 +53,7 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-nbrowser \
        #node-red-contrib-string \
        #node-red-contrib-filebrowser \
-       #node-red-contrib-blockly \
+       node-red-contrib-blockly \
        #node-red-contrib-smartmeter \
        #node-red-contrib-letsencrypt \  # est sur github donc ne s'install pas avec cette commande.
        #node-red-contrib-ui-camera-viewer \
@@ -64,9 +64,6 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-drawsvg \
        #dobaos/node-red-contrib-dobaos
        node-red-contrib-ip
-
-
-
 
 #RUN echo 'Install node perso'
 RUN mkdir -p /usr/src/app/nodes || true
