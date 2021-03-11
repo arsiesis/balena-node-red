@@ -1,0 +1,87 @@
+[
+    {
+        "id": "c7e341a0.381cc",
+        "type": "http in",
+        "z": "d6cf0f8c.b61dc",
+        "name": "",
+        "url": "/png",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "2fb1c354.d04e3c"
+            ]
+        ]
+    },
+    {
+        "id": "2fb1c354.d04e3c",
+        "type": "file in",
+        "z": "d6cf0f8c.b61dc",
+        "name": "",
+        "filename": "/data/node-red/user/test.png",
+        "format": "",
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "c9e28681.361d78"
+            ]
+        ]
+    },
+    {
+        "id": "c9e28681.361d78",
+        "type": "change",
+        "z": "d6cf0f8c.b61dc",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "image/png",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 80,
+        "wires": [
+            [
+                "88974243.7768c"
+            ]
+        ]
+    },
+    {
+        "id": "88974243.7768c",
+        "type": "http response",
+        "z": "d6cf0f8c.b61dc",
+        "name": "",
+        "x": 770,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6e9dfbcd.317a44",
+        "type": "comment",
+        "z": "d6cf0f8c.b61dc",
+        "name": "image dans c:/tmp/node-red.png",
+        "info": "",
+        "x": 250,
+        "y": 40,
+        "wires": []
+    }
+]
