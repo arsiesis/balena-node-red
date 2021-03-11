@@ -59,7 +59,7 @@ services:
   samba:
     #  hostname: samba  # doesn't work
     image: dastrasmue/rpi-samba 
-    command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:jan"  -s "kodi-data:/mount/kodi-data:rw:cta"
+    command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:cta"  -s "kodi-data:/mount/kodi-data:rw:cta"
     volumes:
        - 'node-red-data:/mount/node-red-data'
        - 'kodi-data:/mount/kodi-data'
