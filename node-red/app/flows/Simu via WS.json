@@ -1,0 +1,204 @@
+[
+    {
+        "id": "8ff48786.a19b18",
+        "type": "tab",
+        "label": "SIMU via WS",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8e7ba007.f5762",
+        "type": "debug",
+        "z": "8ff48786.a19b18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9f8a753c.6b1a38",
+        "type": "aedes broker",
+        "z": "8ff48786.a19b18",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "80",
+        "mqtt_ws_path": "ws",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "8e7ba007.f5762"
+            ]
+        ]
+    },
+    {
+        "id": "7f9cc0dd.5a9db",
+        "type": "mqtt in",
+        "z": "8ff48786.a19b18",
+        "name": "",
+        "topic": "/",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ea99eebf.86f7",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "2dae2f9c.4426a"
+            ]
+        ]
+    },
+    {
+        "id": "2dae2f9c.4426a",
+        "type": "debug",
+        "z": "8ff48786.a19b18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9e806199.c6cf3",
+        "type": "mqtt out",
+        "z": "8ff48786.a19b18",
+        "name": "",
+        "topic": "/LAMPE/1",
+        "qos": "2",
+        "retain": "",
+        "broker": "ea99eebf.86f7",
+        "x": 360,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f5fdfa8d.b1dc78",
+        "type": "inject",
+        "z": "8ff48786.a19b18",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"type\":\"TOR\",\"value\":1}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "9e806199.c6cf3"
+            ]
+        ]
+    },
+    {
+        "id": "1ca9fef0.8bf6f1",
+        "type": "inject",
+        "z": "8ff48786.a19b18",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"type\":\"TOR\",\"value\":0}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "9e806199.c6cf3"
+            ]
+        ]
+    },
+    {
+        "id": "dd0270c9.65cc1",
+        "type": "inject",
+        "z": "8ff48786.a19b18",
+        "name": "50%",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"type\":\"DIM\",\"value\":50}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "9e806199.c6cf3"
+            ]
+        ]
+    },
+    {
+        "id": "ea99eebf.86f7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ws://7dd3cbded26c6e2ff33067367964e88f.balena-devices.com:80",
+        "port": "1883",
+        "clientid": "nodeeee",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]

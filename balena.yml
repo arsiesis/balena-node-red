@@ -20,6 +20,7 @@ data:
     - TITRE: "Nodered"
     - TITRE_URL: "https://flows.nodered.org"
     - SCP_PASSWORD: "balena2"
+    - ENABLE_REMOTE_CONTROL_VIA_ADVANCEDSETTINGS: "1"
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_start_x: 1
     - BALENA_HOST_CONFIG_gpu_mem: 128
