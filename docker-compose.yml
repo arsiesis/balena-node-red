@@ -12,7 +12,7 @@ services:
   node-red:
     build: ./node-red
     environment:
-      - UDEV=1  #active le hotplug des périphérique USB par ex mais il faut que privileged true soit déclarer aussi
+      - UDEV=1  #active le hotplug des périphérique USB par ex mais il faut que privileged true soit déclarer aussi # see https://www.balena.io/docs/reference/base-images/base-images/#working-with-dynamically-plugged-devices
       - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
     volumes:
       - node-red-data:/data
