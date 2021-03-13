@@ -10,7 +10,6 @@ volumes:
     redis-data:
     knxd-data:
     #browser-data:
-    redis-data:
 
 services:
   node-red:
