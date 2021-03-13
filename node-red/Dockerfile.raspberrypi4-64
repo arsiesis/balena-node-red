@@ -1,31 +1,112 @@
 ###
 # Build step
 ###
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-stretch-build as build
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-buster-build as build
+
+RUN apt-get update && apt-get install -yq --no-install-recommends \
+  build-essential \  
+  make \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red \
+       i2c-bus \
        node-red-admin \
-       node-red-contrib-balena
+       #node-red-contrib-balena \
+       node-red-node-pi-gpio \
+       #node-red-contrib-clock-generator \
+       node-red-contrib-knx-ultimate \
+       node-red-contrib-sonos-plus \
+       node-red-dashboard \
+       #node-red-contrib-cron-plus \
+       #node-red-contrib-sun-position \
+       node-red-contrib-presence-faker \
+       node-red-contrib-ical-events \
+       #node-red-contrib-collector \
+       #node-red-contrib-match \
+       node-red-contrib-boolean-logic-ultimate \
+       #node-red-contrib-sonospollytts \
+       #node-red-contrib-tasmota \
+       node-red-contrib-aedes \
+       #node-red-contrib-loxone \
+       #node-red-contrib-ngrok \
+       #node-red-contrib-screenshot \
+       #node-red-contrib-buffer-parser\
+       #node-red-contrib-discord \
+       node-red-contrib-string \
+       #node-red-contrib-camerapi \
+       #node-red-contrib-image-tools \
+       #node-red-contrib-sun-position \
+       #node-red-contrib-ads1x15 \
+       #ncd-red-ads1115 \
+       #node-red-contrib-dac6573 \
+       #node-red-contrib-mcp23017chip \
+       #node-red-node-smooth \
+       #node-red-node-base64 \
+       node-red-contrib-i2c \
+       node-red-contrib-bigtimer \
+       node-red-contrib-persist \
+       #node-red-contrib-moment \
+       node-red-node-serialport \
+       #node-red-contrib-alarm \
+       #node-red-contrib-ui-multistate-switch \
+       #node-red-contrib-nbrowser \
+       #node-red-contrib-string \
+       #node-red-contrib-filebrowser \
+       node-red-contrib-blockly \
+       #node-red-contrib-smartmeter \
+       #node-red-contrib-letsencrypt \  # est sur github donc ne s'install pas avec cette commande.
+       #node-red-contrib-ui-camera-viewer \
+       #node-red-contrib-alexa-notification \
+       #node-red-contrib-ui-thermostat \
+       #node-red-contrib-ui-media-recorder \
+       #node-red-contrib-image-output \
+       #node-red-contrib-drawsvg \
+       #dobaos/node-red-contrib-dobaos
+       node-red-contrib-ip
 
+#RUN echo 'Install node perso'
+RUN mkdir -p /usr/src/app/nodes || true
+COPY ./app/nodes/ /usr/src/app/nodes/
+# Defines our working directory in container
+WORKDIR /usr/src/app/nodes/arduino_slave/
+RUN npm install --production --unsafe-perm
+# Defines our working directory in container
+WORKDIR /usr/src/app/nodes/ad5242/
+RUN npm install --production --unsafe-perm
+#RUN echo 'Install node publié sur npm'
 ###
 # Runtime image
 ###
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-stretch-run
-
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-buster-run
 RUN apt-get update && apt-get install -yq --no-install-recommends \
   rpi.gpio \
+  git \
+  #make \
   python-dev \
   python-rpi.gpio \
   libatomic1 \
+  #python-picamera \
+  #python3-picamera \
+  #gstreamer-1.0 \
+  #gstreamer1.0-tools \
+  #gstreamer1.0-plugins-bad \
+  #gstreamer1.0-plugins-good \
+  #gstreamer1.0-libav \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Enable the v4l2 driver for the Raspberry Pi camera
+RUN printf "bcm2835-v4l2\n" >> /etc/modules
 
 # Defines our working directory in container
 WORKDIR /usr/src/app
 
 # Copy over the files created in the previous step, including lib/, bin/
 COPY --from=build /usr/local/bin /usr/local/bin
-COPY --from=build /usr/local/lib/node_modules /usr/local/lib/node_modules
+#copie des répertoire des noeuds installer en global
+COPY --from=build /usr/local/lib/node_modules /usr/local/lib/node_modules   
+#copie des répertoire des noeuds perso installer
+COPY --from=build /usr/src/app/nodes/. /usr/src/app/nodes   
 
 # This will copy all files in our root to the working  directory in the container
 COPY ./app ./
