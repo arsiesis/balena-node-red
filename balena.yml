@@ -24,6 +24,7 @@ data:
     - LAUNCH_URL: '"http://localhost:80/ui"'
     - KIOSK: '1'
     - GALLERY_URL: 'testurl'
+    - WINDOW_SIZE: '1920,1080'
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_start_x: 1
     - BALENA_HOST_CONFIG_gpu_mem: 128
