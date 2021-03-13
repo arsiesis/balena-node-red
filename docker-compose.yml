@@ -71,9 +71,9 @@ services:
       - "445:445"
     #  - "445:445/udp"
   kodi:
-    build: kodi
+    build: ./kodi2
     privileged: true
-    restart: no #always
+    restart: always
     #network_mode: host
     volumes:
       - 'kodi-data:/data'
