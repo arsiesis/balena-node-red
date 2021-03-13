@@ -1,12 +1,14 @@
 version: '2.1'
 # version: '2'
+# Define your own volumes or reuse existing ones if your are in a multicontainer setup
 volumes:
     node-red-data:
     kodi-data:
-    # Define your own volumes or reuse existing ones if your are in a multicontainer setup
     #volume_homeassistant:
     nodered_working_dir:
     node_modules:
+    redis-data:
+    knxd-data:
     #browser-data:
 
 services:
@@ -106,3 +108,12 @@ services:
       - 'redis-data:/data'
     ports:
       - "6379:6379"
+  knxd:
+    build: ./knxd
+    volumes:
+      - knxd-data:/data
+    ports:
+      - 6720:6720
+      - 3671:3671
+    restart: always
+    network_mode: host
