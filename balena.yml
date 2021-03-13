@@ -18,9 +18,12 @@ data:
     - CONSOLE_LOG: "trace"  # fatal < error < warn < info < debug < trace
     - CREDENTIALSECRET: "credentialSecret"
     - TITRE: "Nodered"
-    - TITRE_URL: "https://flows.nodered.org"
-    - SCP_PASSWORD: "balena2"
-    - ENABLE_REMOTE_CONTROL_VIA_ADVANCEDSETTINGS: "1"
+    - TITRE_URL: '"https://flows.nodered.org"'
+    - SCP_PASSWORD: 'balena2'
+    - ENABLE_REMOTE_CONTROL_VIA_ADVANCEDSETTINGS: '1'
+    - LAUNCH_URL: '"http://localhost:80/ui"'
+    - KIOSK: '1'
+    - GALLERY_URL: ''
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_start_x: 1
     - BALENA_HOST_CONFIG_gpu_mem: 128
