@@ -97,3 +97,12 @@ services:
 #    environment: 
 #      LAUNCH_URL: '"http://node-red:80/ui"'
 #      KIOSK: '1'
+  redis:
+    build: ./redis
+    privileged: true
+    restart: always
+    #network_mode: host
+    volumes:
+      - 'redis-data:/data'
+    ports:
+      - "6379:6379"
