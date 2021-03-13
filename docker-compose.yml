@@ -73,7 +73,7 @@ services:
   kodi:
     build: kodi
     privileged: true
-    restart: always
+    restart: no #always
     #network_mode: host
     volumes:
       - 'kodi-data:/data'
