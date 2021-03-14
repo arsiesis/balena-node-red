@@ -103,24 +103,6 @@ services:
 #      io.balena.update.handover-timeout: ''
 #    devices:
 #      - "/dev/input/by-path/:/dev/input/by-path/"   #pour le noeud clavier avec les noeud gpio
-  kodi2:
-    image: rimago/rpi-kodi
-    container_name: "kodi"
-    user: kodi
-    network_mode: host
-    restart: always
-    privileged: true
-    devices:
-      - /dev/fb0:/dev/fb0
-      - /dev/vchiq:/dev/vchiq
-    volumes:
-      - kodi2-data:/home/kodi
-#      - "/etc/timezone:/etc/timezone:ro"
-#      - "/etc/localtime:/etc/localtime:ro"
-#    tmpfs:
-#      - /tmp
-    environment:
-      - PULSE_SERVER=127.0.0.1
 #  kiosk:
 #    build: ./kiosk
 #    privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
