@@ -154,18 +154,17 @@ services:
 #      - 3671:3671
 #    restart: always
 #    network_mode: host
-  knxd2:
-    #build: ./knxd2
-    image: andrevs/knxd:arm64
-#    container_name: knxd2
-    privileged: true
+#  knxd2:
+#    #build: ./knxd2
+#    image: andrevs/knxd:arm64
+#    privileged: true
 #    ports:
 #      - "3672:3672/udp"
 #      - "6720:6720/tcp"
-    network_mode: "host"
-    restart: no
-    volumes:
-       - 'knxd2-data:/etc/knxd'
+#    network_mode: "host"
+#    restart: no
+#    volumes:
+#       - 'knxd2-data:/etc/knxd'
   knxd3:
    #build: ./knxd3
     image: themegatb/knxd
