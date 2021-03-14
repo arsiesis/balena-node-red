@@ -14,6 +14,8 @@ volumes:
     knxd3-data:
     knxd4-data:
     knxd5-data:
+    droppy-data:
+    droppy-config:
     #browser-data:
 services:
   node-red:
@@ -212,3 +214,12 @@ services:
     #  - /dev/knx
     #  - /dev/bus/usb:/dev/bus/usb:rwm
     #  - /dev/mem:/dev/mem:rw
+  droppy:
+    container_name: droppy
+    image: silverwind/droppy
+    ports:
+      - '127.0.0.1:8989:8989'
+    volumes:
+      - 'droppy-data:/files'
+      - 'droppy-config:/config'
+    restart: unless-stopped
