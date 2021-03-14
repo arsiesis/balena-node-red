@@ -78,7 +78,7 @@ services:
   samba:
     #  hostname: samba  # doesn't work
     image: dastrasmue/rpi-samba 
-    command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:cta" -s "kodi-data:/mount/kodi-data:rw:cta" -s "kodi2-data:/mount/kodi2-data:rw:cta" -s "redis-data:/mount/redis-data:rw:cta" -s "knxd-data:/mount/knxd-data:rw:cta" -s "knxd2-data:/mount/knxd2-data:rw:cta" -s "knxd-data3:/mount/knxd-data3:rw:cta" -s "knxd4-data:/mount/knxd4-data:rw:cta" -s "knxd5-data:/mount/knxd5-data:rw:cta"
+    command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:cta" -s "kodi-data:/mount/kodi-data:rw:cta" -s "kodi2-data:/mount/kodi2-data:rw:cta" -s "redis-data:/mount/redis-data:rw:cta" -s "knxd-data:/mount/knxd-data:rw:cta" -s "knxd2-data:/mount/knxd2-data:rw:cta" -s "knxd3-data:/mount/knxd3-data:rw:cta" -s "knxd4-data:/mount/knxd4-data:rw:cta" -s "knxd5-data:/mount/knxd5-data:rw:cta"
     volumes:
       - 'node-red-data:/mount/node-red-data'
       - 'kodi-data:/mount/kodi-data'
