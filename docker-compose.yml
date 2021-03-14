@@ -114,7 +114,7 @@ services:
       - /dev/fb0:/dev/fb0
       - /dev/vchiq:/dev/vchiq
     volumes:
-      - kodi-data:/home/kodi
+      - kodi2-data:/home/kodi
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
     tmpfs:
@@ -188,7 +188,7 @@ services:
       - SYS_RAWIO
       - SYS_MODULE
     restart: unless-stopped
-    devices:
-      - /dev/knx
-      - /dev/bus/usb:/dev/bus/usb:rwm
-      - /dev/mem:/dev/mem:rw
+    #devices:
+    #  - /dev/knx
+    #  - /dev/bus/usb:/dev/bus/usb:rwm
+    #  - /dev/mem:/dev/mem:rw
