@@ -172,7 +172,7 @@ services:
     image: spanghf37/knxd:amd64
     restart: always
     volumes:
-      - ./knxd4:/etc/knxd/
+      - ./knxd4-data:/etc/knxd/
     network_mode: host
   knxd5:
     container_name: knxd5
@@ -188,7 +188,7 @@ services:
       - SYS_RAWIO
       - SYS_MODULE
     restart: unless-stopped
-    #devices:
-    #  - /dev/knx
-    #  - /dev/bus/usb:/dev/bus/usb:rwm
-    #  - /dev/mem:/dev/mem:rw
+    devices:
+      - /dev/knx
+      - /dev/bus/usb:/dev/bus/usb:rwm
+      - /dev/mem:/dev/mem:rw
