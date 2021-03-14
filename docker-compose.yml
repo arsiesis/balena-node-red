@@ -117,8 +117,8 @@ services:
       - kodi2-data:/home/kodi
 #      - "/etc/timezone:/etc/timezone:ro"
 #      - "/etc/localtime:/etc/localtime:ro"
-    tmpfs:
-      - /tmp
+#    tmpfs:
+#      - /tmp
     environment:
       - PULSE_SERVER=127.0.0.1
 #  kiosk:
