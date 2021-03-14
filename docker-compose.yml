@@ -168,7 +168,7 @@ services:
     restart: always
     network_mode: host
   knxd4:
-    image: spanghf37/knxd:amd64
+    image: spanghf37/knxd:arm64
     restart: always
     volumes:
       - 'knxd4-data:/etc/knxd/'
