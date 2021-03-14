@@ -77,9 +77,6 @@ services:
       - 'knxd3-data:/mount/knxd3-data'
       - 'knxd4-data:/mount/knxd4-data'
       - 'knxd5-data:/mount/knxd5-data'
-
-
-
     ports:
     #  - "137:137"
     #  - "137:137/udp"
