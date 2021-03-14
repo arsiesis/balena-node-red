@@ -16,6 +16,7 @@ volumes:
     knxd5-data:
     droppy-data:
     droppy-config:
+    snapdrop-config:
     #browser-data:
 services:
   node-red:
@@ -225,3 +226,16 @@ services:
       - 'droppy-data:/files'
       - 'droppy-config:/config'
     restart: no #unless-stopped
+  snapdrop:
+    image: ghcr.io/linuxserver/snapdrop:arm64v8-latest
+    container_name: snapdrop
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - snapdrop-config:/config
+    ports:
+      - 81:80
+      - 443:443
+    restart: unless-stopped
