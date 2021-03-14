@@ -95,7 +95,7 @@ RUN sudo apt-get install python-pip python-crypto build-essential python-all-dev
     apt-get -y --purge autoremove                                                               && \
     rm -rf /var/lib/apt/lists/*
 
-RUN groupadd -g 9002 kodi && useradd -u 9002 -r -g kodi kodi && usermod -a -G video kodi
+RUN groupadd -g 9002 kodi && useradd -u 9002 -r -g kodi kodi && usermod -aG video kodi
 
 ADD /asound.conf /etc/asound.conf
 
