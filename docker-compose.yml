@@ -17,6 +17,7 @@ volumes:
     droppy-data:
     droppy-config:
     snapdrop-config:
+    heimdall-config:
     #browser-data:
 services:
   node-red:
@@ -237,5 +238,18 @@ services:
       - snapdrop-config:/config
     ports:
       - 81:80
+      - 443:443
+    restart: unless-stopped
+  heimdall:
+    image: ghcr.io/linuxserver/heimdall:arm64v8-latest
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - heimdall-config:/config
+    ports:
+      - 82:80
       - 443:443
     restart: unless-stopped
