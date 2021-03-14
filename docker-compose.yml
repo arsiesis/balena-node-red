@@ -116,7 +116,7 @@ services:
     image: rimago/rpi-kodi
 #    user: kodi
     network_mode: host
-    restart: always
+    restart: no
     privileged: true
     devices:
       - /dev/fb0:/dev/fb0
@@ -156,14 +156,14 @@ services:
 #    network_mode: host
   knxd2:
     #build: ./knxd2
-    image: andrevs/knxd:amd64
+    image: andrevs/knxd:arm64
 #    container_name: knxd2
     privileged: true
 #    ports:
 #      - "3672:3672/udp"
 #      - "6720:6720/tcp"
     network_mode: "host"
-    restart: always
+    restart: no
     volumes:
        - 'knxd2-data:/etc/knxd'
   knxd3:
@@ -174,7 +174,7 @@ services:
 #    ports:
 #      - 6720:6720
 #      - 3671:3671
-    restart: always
+    restart: no
     network_mode: host
   knxd4:
     image: spanghf37/knxd:arm64
@@ -199,10 +199,10 @@ services:
 #    ports:
 #      - "6720:6720/tcp"
 #      - "3671:3671/udp"
-    cap_add:
-      - SYS_RAWIO
-      - SYS_MODULE
-    restart: unless-stopped
+#    cap_add:
+#     - SYS_RAWIO
+#     - SYS_MODULE
+    restart: no  #unless-stopped
     #devices:
     #  - /dev/knx
     #  - /dev/bus/usb:/dev/bus/usb:rwm
