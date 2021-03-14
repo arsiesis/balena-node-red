@@ -182,13 +182,20 @@ services:
     volumes:
       - 'knxd4-data:/etc/knxd/'
     network_mode: host
+    cap_add:
+      - SYS_RAWIO
+      - SYS_MODULE
+    devices:
+      - /dev/knx
+      - /dev/bus/usb:/dev/bus/usb:rwm
+      - /dev/mem:/dev/mem:rw
   knxd5:
 #    container_name: knxd5
     build:
       context: ./knxd5
       dockerfile: Dockerfile
-#      args:                                                                      
-#        KNXD_VERSION: 0.14.39
+      args:                                                                      
+        KNXD_VERSION: 0.14.39
 #    ports:
 #      - "6720:6720/tcp"
 #      - "3671:3671/udp"
@@ -196,7 +203,7 @@ services:
       - SYS_RAWIO
       - SYS_MODULE
     restart: unless-stopped
-    devices:
-      - /dev/knx
-      - /dev/bus/usb:/dev/bus/usb:rwm
-      - /dev/mem:/dev/mem:rw
+    #devices:
+    #  - /dev/knx
+    #  - /dev/bus/usb:/dev/bus/usb:rwm
+    #  - /dev/mem:/dev/mem:rw
