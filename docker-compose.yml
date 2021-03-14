@@ -57,21 +57,20 @@ services:
     labels:
       io.balena.features.dbus: 1
     volumes:
-      - node-red-data:/data
-      - nodered_working_dir:/usr/src/app
-      - node_modules:/usr/local/lib/node_modules
-      - node-red-data:./node-red-data
-      - kodi-data:./kodi-data
-      - kodi2-data:./kodi2-data
+      - nodered_working_dir:/data/nodered_working_dir
+      - node_modules:/data/node_modules
+      - node-red-data:/data/node-red-data
+      - kodi-data:/data/kodi-data
+      - kodi2-data:/data/kodi2-data
       #- volume_homeassistant:./volume_homeassistant
-      - nodered_working_dir:./nodered_working_dir
-      - node_modules:./node_modules
-      - redis-data:./redis-data
-      - knxd-data:./knxd-data
-      - knxd2-data:./knxd2-data
-      - knxd3-data:./knxd3-data
-      - knxd4-data:./knxd4-data
-      - knxd5-data:./knxd5-data
+      - nodered_working_dir:/data/nodered_working_dir
+      - node_modules:/data/node_modules
+      - redis-data:/data/redis-data
+      - knxd-data:/data/knxd-data
+      - knxd2-data:/data/knxd2-data
+      - knxd3-data:/data/knxd3-data
+      - knxd4-data:/data/knxd4-data
+      - knxd5-data:/data/knxd5-data
     ports:
       - "22:22/udp"
       - "22:22/tcp"  
