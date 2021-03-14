@@ -57,7 +57,6 @@ services:
     labels:
       io.balena.features.dbus: 1
     volumes:
-      - nodered_working_dir:/data/nodered_working_dir
       - node_modules:/data/node_modules
       - node-red-data:/data/node-red-data
       - kodi-data:/data/kodi-data
