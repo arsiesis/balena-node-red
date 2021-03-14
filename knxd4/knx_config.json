@@ -1,0 +1,626 @@
+{
+	"knxd_ip": "192.168.0.30",
+	"knxd_port": 6720,
+	"AllowWebserver": true,
+	"AllowKillHomebridge": true,
+	"Devices": [{
+			"DeviceName": "Brise soleil Charles",
+			"Services": [{
+				"ServiceType": "WindowCovering",
+				"Handler": "WindowCoveringTilt",
+				"ServiceName": "Brise soleil Charles",
+				"Characteristics": [{
+						"Type": "TargetPosition",
+						"Set": [
+							"1/3/0"
+						],
+						"Listen": [
+							"1/3/0"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentPosition",
+						"Listen": [
+							"1/4/1"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "PositionState"
+					},
+					{
+						"Type": "TargetHorizontalTiltAngle",
+						"Set": [
+							"1/3/1"
+						],
+						"Listen": [
+							"1/3/1"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentHorizontalTiltAngle",
+						"Listen": [
+							"1/4/2"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					}
+				],
+				"KNXObjects": [{
+						"Type": "ShutterMove",
+						"Listen": "1/0/0",
+						"DPT": "DPT1"
+					},
+					{
+						"Type": "ActiverQuittance",
+						"Set": "1/0/6",
+						"DPT": "DPT1"
+					}
+				],
+				"KNXReadRequests": [
+					"1/4/1",
+					"1/4/2"
+				],
+				"LocalConstants": {
+					"ninetyDegRotation": true
+				}
+			}]
+		},
+		{
+			"DeviceName": "Brise soleil Héloïse",
+			"Services": [{
+				"ServiceType": "WindowCovering",
+				"Handler": "WindowCoveringTilt",
+				"ServiceName": "Brise soleil Héloïse",
+				"Characteristics": [{
+						"Type": "TargetPosition",
+						"Set": [
+							"1/3/6"
+						],
+						"Listen": [
+							"1/3/6"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentPosition",
+						"Listen": [
+							"1/4/10"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "PositionState"
+					},
+					{
+						"Type": "TargetHorizontalTiltAngle",
+						"Set": [
+							"1/3/7"
+						],
+						"Listen": [
+							"1/3/7"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentHorizontalTiltAngle",
+						"Listen": [
+							"1/4/11"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					}
+				],
+				"KNXObjects": [{
+					"Type": "ShutterMove",
+					"Listen": "1/0/0",
+					"DPT": "DPT1"
+				}],
+				"KNXReadRequests": [
+					"1/4/10",
+					"1/4/11"
+				],
+				"LocalConstants": {
+					"ninetyDegRotation": true
+				}
+			}]
+		},
+		{
+			"DeviceName": "Brise soleil sud Louis",
+			"Services": [{
+				"ServiceType": "WindowCovering",
+				"Handler": "WindowCoveringTilt",
+				"ServiceName": "Brise soleil sud Louis",
+				"Characteristics": [{
+						"Type": "TargetPosition",
+						"Set": [
+							"1/3/4"
+						],
+						"Listen": [
+							"1/3/4"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentPosition",
+						"Listen": [
+							"1/4/7"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "PositionState"
+					},
+					{
+						"Type": "TargetHorizontalTiltAngle",
+						"Set": [
+							"1/3/5"
+						],
+						"Listen": [
+							"1/3/5"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentHorizontalTiltAngle",
+						"Listen": [
+							"1/4/8"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					}
+				],
+				"KNXObjects": [{
+					"Type": "ShutterMove",
+					"Listen": "1/0/0",
+					"DPT": "DPT1"
+				}],
+				"KNXReadRequests": [
+					"1/4/7",
+					"1/4/8"
+				],
+				"LocalConstants": {
+					"ninetyDegRotation": true
+				}
+			}]
+		},
+		{
+			"DeviceName": "Brise soleil ouest Louis",
+			"Services": [{
+				"ServiceType": "WindowCovering",
+				"Handler": "WindowCoveringTilt",
+				"ServiceName": "Brise soleil ouest Louis",
+				"Characteristics": [{
+						"Type": "TargetPosition",
+						"Set": [
+							"1/3/2"
+						],
+						"Listen": [
+							"1/3/2"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentPosition",
+						"Listen": [
+							"1/4/4"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "PositionState"
+					},
+					{
+						"Type": "TargetHorizontalTiltAngle",
+						"Set": [
+							"1/3/3"
+						],
+						"Listen": [
+							"1/3/3"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentHorizontalTiltAngle",
+						"Listen": [
+							"1/4/5"
+						],
+						"MaxValue": 90,
+						"MinValue": 0,
+						"DPT": "DPT5"
+					}
+				],
+				"KNXObjects": [{
+					"Type": "ShutterMove",
+					"Listen": "1/0/0",
+					"DPT": "DPT1"
+				}],
+				"KNXReadRequests": [
+					"1/4/4",
+					"1/4/5"
+				],
+				"LocalConstants": {
+					"ninetyDegRotation": true
+				}
+			}]
+		},
+		{
+			"DeviceName": "Sol terrasses jardin",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Sol terrasses jardin",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/4"
+					],
+					"Listen": [
+						"0/1/4"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Terrasse est jardin",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Terrasse est jardin",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/1"
+					],
+					"Listen": [
+						"0/1/1"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Terrasse nord jardin",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Terrasse nord jardin",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/2"
+					],
+					"Listen": [
+						"0/0/2"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Terrasse ouest jardin",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Terrasse ouest jardin",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/3"
+					],
+					"Listen": [
+						"0/0/3"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Escaliers terrasses jardin",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Escaliers terrasses jardin",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/5"
+					],
+					"Listen": [
+						"0/1/5"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Lumière piscine",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Lumière piscine",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/6"
+					],
+					"Listen": [
+						"0/1/6"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Mur piscine",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Mur piscine",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/7"
+					],
+					"Listen": [
+						"0/1/7"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Filtration piscine",
+			"Services": [{
+				"ServiceType": "Switch",
+				"ServiceName": "Filtration piscine",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"2/4/16"
+					],
+					"Listen": [
+						"2/4/17"
+					]
+				}]
+			}]
+		},
+        {
+                "DeviceName": "Filtration lente piscine",
+                "Services": [
+                        {
+                                "ServiceType": "Switch",
+                                "ServiceName": "Filtration lente piscine",
+                                "Characteristics": [
+                                        {
+                                                "Type": "On",
+                                                "Set": [
+                                                        "2/4/20"
+                                                ],
+                                                "Listen": [
+                                                        "2/4/21"
+                                                ]
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                "DeviceName": "Filtration normale piscine",
+                "Services": [
+                        {
+                                "ServiceType": "Switch",
+                                "ServiceName": "Filtration normale piscine",
+                                "Characteristics": [
+                                        {
+                                                "Type": "On",
+                                                "Set": [
+                                                        "2/4/22"
+                                                ],
+                                                "Listen": [
+                                                        "2/4/23"
+                                                ]
+                                        }
+                                ]
+                        }
+                ]
+        },
+		{
+			"DeviceName": "Nettoyage piscine",
+			"Services": [{
+				"ServiceType": "Switch",
+				"ServiceName": "Nettoyage piscine",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"2/4/18"
+					],
+					"Listen": [
+						"2/4/19"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Chauffage piscine",
+			"Services": [{
+				"ServiceType": "Switch",
+				"ServiceName": "Chauffage piscine",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"2/4/1"
+					],
+					"Listen": [
+						"2/4/3"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Arrosage 1",
+			"Services": [{
+				"ServiceType": "Switch",
+				"ServiceName": "Arrosage 1",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"2/5/0"
+					],
+					"Listen": [
+						"2/5/4"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Arrosage 2",
+			"Services": [{
+				"ServiceType": "Switch",
+				"ServiceName": "Arrosage 2",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"2/5/1"
+					],
+					"Listen": [
+						"2/5/5"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Température",
+			"Services": [{
+				"ServiceType": "TemperatureSensor",
+				"ServiceName": "Température",
+				"Characteristics": [{
+					"Type": "CurrentTemperature",
+					"Listen": [
+						"8/1/0"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Température piscine",
+			"Services": [{
+				"ServiceType": "TemperatureSensor",
+				"ServiceName": "Température",
+				"Characteristics": [{
+					"Type": "CurrentTemperature",
+					"Listen": [
+						"8/1/2"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "TempératureExt",
+			"Services": [{
+				"ServiceType": "TemperatureSensor",
+				"ServiceName": "TempératureExt",
+				"Characteristics": [{
+					"Type": "CurrentTemperature",
+					"Listen": [
+						"8/0/1"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Verrouillage volet piscine",
+			"Services": [{
+				"ServiceType": "LockMechanism",
+				"ServiceName": "Verrouillage volet piscine",
+				"Characteristics": [{
+						"Type": "LockCurrentState",
+						"Listen": [
+							"2/4/14"
+						]
+					},
+					{
+						"Type": "LockTargetState",
+						"Set": [
+							"2/4/13"
+						],
+						"DPT": "DPT1"
+					}
+				]
+			}]
+		},
+		{
+			"DeviceName": "Volet piscine",
+			"Services": [{
+				"ServiceType": "WindowCovering",
+				"Handler": "WindowCoveringTilt",
+				"ServiceName": "Volet piscine",
+				"Characteristics": [{
+						"Type": "TargetPosition",
+						"Set": [
+							"2/4/12"
+						],
+						"Listen": [
+							"2/4/12"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "CurrentPosition",
+						"Listen": [
+							"2/4/9"
+						],
+						"DPT": "DPT5"
+					},
+					{
+						"Type": "PositionState"
+					}
+				],
+				"KNXObjects": [{
+					"Type": "ShutterMove",
+					"Listen": "2/4/6",
+					"DPT": "DPT1"
+				}],
+				"KNXReadRequests": [
+					"2/4/9"
+				],
+				"LocalConstants": {
+					"ninetyDegRotation": true
+				}
+			}]
+		},
+		{
+			"DeviceName": "LED Groupe Jardin Piscine",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "LED Groupe Jardin Piscine",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/9"
+					],
+					"Listen": [
+						"0/1/9"
+					]
+				}]
+			}]
+		},
+		{
+			"DeviceName": "Table repas jardin",
+			"Services": [{
+				"ServiceType": "Lightbulb",
+				"ServiceName": "Table repas jardin",
+				"Characteristics": [{
+					"Type": "On",
+					"Set": [
+						"0/0/8"
+					],
+					"Listen": [
+						"0/1/8"
+					]
+				}]
+			}]
+		}
+	],
+	"GroupAddresses": []
+}
