@@ -15,7 +15,6 @@ volumes:
     knxd4-data:
     knxd5-data:
     #browser-data:
-
 services:
   node-red:
     build: ./node-red
@@ -67,11 +66,12 @@ services:
   samba:
     #  hostname: samba  # doesn't work
     image: dastrasmue/rpi-samba 
-    command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:cta"  -s "kodi-data:/mount/kodi-data:rw:cta"
+    command:  -u "cta:domotique" -s "node-red-data:/mount/node-red-data:rw:cta" -s "kodi-data:/mount/kodi-data:rw:cta" -s "kodi2-data:/mount/kodi2-data:rw:cta" -s "redis-data:/mount/redis-data:rw:cta" -s "knxd-data:/mount/knxd-data:rw:cta" -s "knxd2-data:/mount/knxd2-data:rw:cta" -s "knxd-data3:/mount/knxd-data3:rw:cta" -s "knxd4-data:/mount/knxd4-data:rw:cta" -s "knxd5-data:/mount/knxd5-data:rw:cta"
     volumes:
       - 'node-red-data:/mount/node-red-data'
       - 'kodi-data:/mount/kodi-data'
       - 'kodi2-data:/mount/kodi2-data'
+      - 'redis-data::/mount/redis-data'
       - 'knxd-data:/mount/knxd-data'
       - 'knxd2-data:/mount/knxd2-data'
       - 'knxd3-data:/mount/knxd3-data'
@@ -149,7 +149,7 @@ services:
   knxd2:
     #build: ./knxd2
     image: andrevs/knxd:amd64
-    container_name: knxd2
+#    container_name: knxd2
     privileged: true
 #    ports:
 #      - "3672:3672/udp"
@@ -175,7 +175,7 @@ services:
       - ./knxd4-data:/etc/knxd/
     network_mode: host
   knxd5:
-    container_name: knxd5
+#    container_name: knxd5
     build:
       context: ./knxd5
       dockerfile: Dockerfile
