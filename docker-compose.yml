@@ -189,7 +189,6 @@ services:
     restart: always
     volumes:
       - 'knxd4-data:/etc/knxd/'
-      - /run/udev:/run/udev:ro
     network_mode: host
     ports:
       - 6720:6720
@@ -201,7 +200,7 @@ services:
       - SYS_RAWIO
       - SYS_MODULE
     devices:
-      #- /run/udev:/run/udev:ro
+      - /run/udev:/run/udev:ro
       - /dev/ttyUSB0:/dev/ttyUSB0
       - /dev/ttyUSB1:/dev/ttyUSB1
       - /dev/ttyUSB2:/dev/ttyUSB2
