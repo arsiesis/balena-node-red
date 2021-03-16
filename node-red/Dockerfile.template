@@ -63,7 +63,10 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        #node-red-contrib-ui-media-recorder \
        #node-red-contrib-image-output \
        #node-red-contrib-drawsvg \
-       #dobaos/node-red-contrib-dobaos
+       node-red-contrib-virtual-smart-home \
+       node-red-contrib-counter \
+       node-red-contrib-tts-ultimate \
+       #dobaos/node-red-contrib-dobaos \
        node-red-contrib-ip
 
 #RUN echo 'Install node perso'

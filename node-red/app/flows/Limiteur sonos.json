@@ -1,0 +1,741 @@
+[
+    {
+        "id": "69109bf5.da8e14",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5ef015ce.b572dc",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "60ee332f.1cb22c",
+        "compatibilityMode": false,
+        "command": "player.get.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "397e9cf7.9d4b04"
+            ]
+        ]
+    },
+    {
+        "id": "d2d5531f.6f96b",
+        "type": "comment",
+        "z": "69109bf5.da8e14",
+        "name": "LIMITEUR VOLUME SONOS LABO",
+        "info": "B8-E9-37-B4-56-42:D\tSonos 1\nB8-E9-37-B7-71-74:8\tSonos 2\nB8-E9-37-B7-70-AC:C\tSonos 3\nB8-E9-37-B7-71-66:B\tSonos 4\nB8-E9-37-B7-71-48:F\tSonos 5\nB8-E9-37-B7-70-CA:8\tSonos 6\n",
+        "x": 260,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "10963459.9fcfec",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "92874174.d950d",
+        "compatibilityMode": false,
+        "command": "player.get.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "306f4290.51210e"
+            ]
+        ]
+    },
+    {
+        "id": "ec4ffbf6.6d3b98",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "cdb16bc9.0f4fb8",
+        "compatibilityMode": false,
+        "command": "player.get.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "14b417e3.86db18"
+            ]
+        ]
+    },
+    {
+        "id": "f7d1c616.191e08",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "dd4db2b5.efdb2",
+        "compatibilityMode": false,
+        "command": "player.get.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "b5e22946.2250f8"
+            ]
+        ]
+    },
+    {
+        "id": "35ef3e5d.ac2d52",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "6e973fa3.de2e2",
+        "compatibilityMode": false,
+        "command": "player.get.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 390,
+        "y": 420,
+        "wires": [
+            [
+                "a9e83aad.fa0f18"
+            ]
+        ]
+    },
+    {
+        "id": "439ad104.04f5e",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "85759d05.a880e",
+        "compatibilityMode": false,
+        "command": "player.get.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "fadfbf15.0ba81"
+            ]
+        ]
+    },
+    {
+        "id": "a5327b35.d49ae8",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "5ef015ce.b572dc",
+                "10963459.9fcfec",
+                "ec4ffbf6.6d3b98",
+                "f7d1c616.191e08",
+                "35ef3e5d.ac2d52",
+                "439ad104.04f5e"
+            ]
+        ]
+    },
+    {
+        "id": "6f3ad42.2aaf82c",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "60ee332f.1cb22c",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1090,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8584a94b.04eed8",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "92874174.d950d",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1090,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af585939.648818",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "cdb16bc9.0f4fb8",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1090,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a9e6a61.6a8036",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "dd4db2b5.efdb2",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1090,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f94ef499.17eb48",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "6e973fa3.de2e2",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1090,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f24e6823.4abfa8",
+        "type": "sonos-universal",
+        "z": "69109bf5.da8e14",
+        "confignode": "85759d05.a880e",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd28a35c.838a6",
+        "type": "switch",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "611b6adf.7c0464",
+                "b97e23a.4d86be"
+            ]
+        ]
+    },
+    {
+        "id": "397e9cf7.9d4b04",
+        "type": "function",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "func": "msg.payload = Number (msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "bd28a35c.838a6"
+            ]
+        ]
+    },
+    {
+        "id": "611b6adf.7c0464",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 180,
+        "wires": [
+            [
+                "6f3ad42.2aaf82c"
+            ]
+        ]
+    },
+    {
+        "id": "ea895085.55018",
+        "type": "switch",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "58720705.d07ed8",
+                "b97e23a.4d86be"
+            ]
+        ]
+    },
+    {
+        "id": "306f4290.51210e",
+        "type": "function",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "func": "msg.payload = Number (msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "ea895085.55018"
+            ]
+        ]
+    },
+    {
+        "id": "58720705.d07ed8",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 240,
+        "wires": [
+            [
+                "8584a94b.04eed8"
+            ]
+        ]
+    },
+    {
+        "id": "bd8ba5ab.701cc8",
+        "type": "switch",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "b14354.1c99bcb",
+                "b97e23a.4d86be"
+            ]
+        ]
+    },
+    {
+        "id": "14b417e3.86db18",
+        "type": "function",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "func": "msg.payload = Number (msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 300,
+        "wires": [
+            [
+                "bd8ba5ab.701cc8"
+            ]
+        ]
+    },
+    {
+        "id": "b14354.1c99bcb",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 300,
+        "wires": [
+            [
+                "af585939.648818"
+            ]
+        ]
+    },
+    {
+        "id": "17bf7808.5c8de8",
+        "type": "switch",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 360,
+        "wires": [
+            [
+                "afabea1c.3e28c8",
+                "b97e23a.4d86be"
+            ]
+        ]
+    },
+    {
+        "id": "b5e22946.2250f8",
+        "type": "function",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "func": "msg.payload = Number (msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "17bf7808.5c8de8"
+            ]
+        ]
+    },
+    {
+        "id": "afabea1c.3e28c8",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 360,
+        "wires": [
+            [
+                "1a9e6a61.6a8036"
+            ]
+        ]
+    },
+    {
+        "id": "50925496.66a32c",
+        "type": "switch",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "5f399f4d.27e22",
+                "b97e23a.4d86be"
+            ]
+        ]
+    },
+    {
+        "id": "a9e83aad.fa0f18",
+        "type": "function",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "func": "msg.payload = Number (msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "50925496.66a32c"
+            ]
+        ]
+    },
+    {
+        "id": "5f399f4d.27e22",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 420,
+        "wires": [
+            [
+                "f94ef499.17eb48"
+            ]
+        ]
+    },
+    {
+        "id": "d991f85e.f0aff8",
+        "type": "switch",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 480,
+        "wires": [
+            [
+                "79fc76b5.ea4448",
+                "b97e23a.4d86be"
+            ]
+        ]
+    },
+    {
+        "id": "fadfbf15.0ba81",
+        "type": "function",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "func": "msg.payload = Number (msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 480,
+        "wires": [
+            [
+                "d991f85e.f0aff8"
+            ]
+        ]
+    },
+    {
+        "id": "79fc76b5.ea4448",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "f24e6823.4abfa8"
+            ]
+        ]
+    },
+    {
+        "id": "b97e23a.4d86be",
+        "type": "debug",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "60ee332f.1cb22c",
+        "type": "sonos-config",
+        "name": "Sonos 1",
+        "serialnum": "B8-E9-37-B4-56-42:D",
+        "ipaddress": "10.0.0.215"
+    },
+    {
+        "id": "92874174.d950d",
+        "type": "sonos-config",
+        "name": "Sonos 2",
+        "serialnum": "B8-E9-37-B7-71-74:8",
+        "ipaddress": ""
+    },
+    {
+        "id": "cdb16bc9.0f4fb8",
+        "type": "sonos-config",
+        "name": "Sonos 3",
+        "serialnum": "B8-E9-37-B7-70-AC:C",
+        "ipaddress": ""
+    },
+    {
+        "id": "dd4db2b5.efdb2",
+        "type": "sonos-config",
+        "name": "Sonos 4",
+        "serialnum": "B8-E9-37-B7-71-66:B",
+        "ipaddress": ""
+    },
+    {
+        "id": "6e973fa3.de2e2",
+        "type": "sonos-config",
+        "name": "Sonos 5",
+        "serialnum": "B8-E9-37-B7-71-48:F",
+        "ipaddress": ""
+    },
+    {
+        "id": "85759d05.a880e",
+        "type": "sonos-config",
+        "name": "Sonos 6",
+        "serialnum": "B8-E9-37-B7-70-CA:8",
+        "ipaddress": ""
+    }
+]

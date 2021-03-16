@@ -1,0 +1,539 @@
+[
+    {
+        "id": "3c7519b7.b8d7e6",
+        "type": "ttsultimate",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "voice": "fr-FR",
+        "ssml": false,
+        "sonosipaddress": "10.0.0.138",
+        "sonosvolume": "50",
+        "sonoshailing": "Hailing_Hailing.mp3",
+        "config": "424b754c.79dddc",
+        "property": "payload",
+        "propertyType": {},
+        "rules": [
+            {
+                "host": "10.0.0.215"
+            },
+            {
+                "host": "10.0.0.221"
+            },
+            {
+                "host": "10.0.0.179"
+            },
+            {
+                "host": "10.0.0.152"
+            },
+            {
+                "host": "10.0.0.222"
+            }
+        ],
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "2272ddc3.c2fa42"
+            ],
+            [
+                "c52f6b5b.0f2708"
+            ]
+        ]
+    },
+    {
+        "id": "832dde36.fa2cf",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Bonjour",
+        "payloadType": "str",
+        "x": 230,
+        "y": 600,
+        "wires": [
+            [
+                "3c7519b7.b8d7e6"
+            ]
+        ]
+    },
+    {
+        "id": "2272ddc3.c2fa42",
+        "type": "debug",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c52f6b5b.0f2708",
+        "type": "debug",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "980642a4.93e7c",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "Il est l'heure de travailler",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Il est l'heure de travailler",
+        "payloadType": "str",
+        "x": 170,
+        "y": 640,
+        "wires": [
+            [
+                "3c7519b7.b8d7e6"
+            ]
+        ]
+    },
+    {
+        "id": "9002f1c0.af697",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "On sonne à la porte",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "On sonne à la porte",
+        "payloadType": "str",
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [
+                "3c7519b7.b8d7e6"
+            ]
+        ]
+    },
+    {
+        "id": "1e284d5.e1df8b3",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "C'est pas bientôt fini ce rafus !",
+        "payloadType": "str",
+        "x": 230,
+        "y": 780,
+        "wires": [
+            [
+                "a2e903c3.5091"
+            ]
+        ]
+    },
+    {
+        "id": "a2e903c3.5091",
+        "type": "ttsultimate",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "voice": "fr-FR",
+        "ssml": false,
+        "sonosipaddress": "10.0.0.138",
+        "sonosvolume": "70",
+        "sonoshailing": "Hailing_Hailing.mp3",
+        "config": "424b754c.79dddc",
+        "property": "payload",
+        "propertyType": {},
+        "rules": [
+            {
+                "host": "10.0.0.215"
+            },
+            {
+                "host": "10.0.0.221"
+            },
+            {
+                "host": "10.0.0.179"
+            },
+            {
+                "host": "10.0.0.152"
+            },
+            {
+                "host": "10.0.0.222"
+            }
+        ],
+        "x": 450,
+        "y": 780,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4e81610d.2175d",
+        "type": "ttsultimate",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "voice": "fr-FR",
+        "ssml": false,
+        "sonosipaddress": "10.0.0.148",
+        "sonosvolume": "75",
+        "sonoshailing": "Hailing_Hailing.mp3",
+        "config": "424b754c.79dddc",
+        "property": "payload",
+        "propertyType": {},
+        "rules": [],
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "559e29.ca1301d8",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "C'est pas bientôt fini de glander !",
+        "payloadType": "str",
+        "x": 310,
+        "y": 1000,
+        "wires": [
+            [
+                "4e81610d.2175d"
+            ]
+        ]
+    },
+    {
+        "id": "e52e6aa0.758538",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Présente toi à ton boss ! ",
+        "payloadType": "str",
+        "x": 310,
+        "y": 1040,
+        "wires": [
+            [
+                "4e81610d.2175d"
+            ]
+        ]
+    },
+    {
+        "id": "73110b26.48e184",
+        "type": "inject",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Et apporte lui, une tasse de café !",
+        "payloadType": "str",
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "4e81610d.2175d"
+            ]
+        ]
+    },
+    {
+        "id": "39b48925.f92c66",
+        "type": "aedes broker",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 150,
+        "y": 1140,
+        "wires": [
+            [
+                "a60259e9.e7ea08"
+            ]
+        ]
+    },
+    {
+        "id": "422d6619.7da928",
+        "type": "mqtt in",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "topic": "/1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9e4e674d.414e58",
+        "x": 130,
+        "y": 880,
+        "wires": [
+            [
+                "1330e0cb.942c0f"
+            ]
+        ]
+    },
+    {
+        "id": "1330e0cb.942c0f",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "C'est pas bientôt fini de glander !",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 880,
+        "wires": [
+            [
+                "4e81610d.2175d"
+            ]
+        ]
+    },
+    {
+        "id": "8461ed3d.90877",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Présente toi à ton boss ! ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 920,
+        "wires": [
+            [
+                "4e81610d.2175d"
+            ]
+        ]
+    },
+    {
+        "id": "5d74cfb3.7de47",
+        "type": "change",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Et apporte lui, une tasse de café !",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 960,
+        "wires": [
+            [
+                "4e81610d.2175d"
+            ]
+        ]
+    },
+    {
+        "id": "a39e9e15.061cd",
+        "type": "mqtt in",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "topic": "/2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9e4e674d.414e58",
+        "x": 130,
+        "y": 920,
+        "wires": [
+            [
+                "8461ed3d.90877"
+            ]
+        ]
+    },
+    {
+        "id": "85c4a442.675858",
+        "type": "mqtt in",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "topic": "/3",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9e4e674d.414e58",
+        "x": 130,
+        "y": 960,
+        "wires": [
+            [
+                "5d74cfb3.7de47"
+            ]
+        ]
+    },
+    {
+        "id": "a60259e9.e7ea08",
+        "type": "debug",
+        "z": "69109bf5.da8e14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "424b754c.79dddc",
+        "type": "ttsultimate-config",
+        "name": "Config",
+        "noderedipaddress": "10.0.0.224",
+        "noderedport": "1980",
+        "purgediratrestart": "purge",
+        "ttsservice": "googletranslate"
+    },
+    {
+        "id": "9e4e674d.414e58",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]

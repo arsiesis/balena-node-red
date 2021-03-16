@@ -1,0 +1,2 @@
+FROM tekn0ir/knxd
+COPY config.ini /config.ini
