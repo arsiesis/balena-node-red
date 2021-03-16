@@ -18,6 +18,7 @@ volumes:
     droppy-config:
     snapdrop-config:
     heimdall-config:
+    homer-data:
     #browser-data:
 services:
   node-red:
@@ -73,6 +74,7 @@ services:
       - knxd3-data:/data/knxd3-data
       - knxd4-data:/data/knxd4-data
       - knxd5-data:/data/knxd5-data
+      - homer-data:/data/homer-data
     ports:
       - "22:22/udp"
       - "22:22/tcp"  
@@ -98,6 +100,7 @@ services:
       - "139:139"
       - "445:445"
     #  - "445:445/udp"
+    restart: no #always
 #  kodi:
 #    build: ./kodi
 #    privileged: true
@@ -171,11 +174,11 @@ services:
 #    restart: no
 #    volumes:
 #       - 'knxd2-data:/etc/knxd'
-  knxd3:
-   #build: ./knxd3
-    image: themegatb/knxd
-    volumes:
-      - knxd3-data:/data
+#  knxd3:
+#   #build: ./knxd3
+#    image: themegatb/knxd
+#    volumes:
+#      - knxd3-data:/data
 #    ports:
 #      - 6720:6720
 #      - 3671:3671
@@ -222,7 +225,7 @@ services:
     #  - /dev/bus/usb:/dev/bus/usb:rwm
     #  - /dev/mem:/dev/mem:rw
   droppy:
-    container_name: droppy
+    #container_name: droppy
     image: silverwind/droppy
     ports:
       - '8989:8989'
@@ -232,7 +235,7 @@ services:
     restart: no #unless-stopped
   snapdrop:
     image: ghcr.io/linuxserver/snapdrop #:arm64v8-latest
-    container_name: snapdrop
+    #container_name: snapdrop
     environment:
       - PUID=1000
       - PGID=1000
@@ -242,10 +245,10 @@ services:
     ports:
       - 81:80
       - 443:443
-    restart: unless-stopped
+    restart: no #unless-stopped
   heimdall:
     image: ghcr.io/linuxserver/heimdall:arm64v8-latest
-    container_name: heimdall
+    #container_name: heimdall
     environment:
       - PUID=1000
       - PGID=1000
@@ -256,3 +259,17 @@ services:
       - 82:80
       - 443:443
     restart: unless-stopped
+  homer:
+    #https://github.com/bastienwirtz/homer
+    image: b4bz/homer
+    #To build from source, comment previous line and uncomment below
+    #build: .
+    container_name: homer
+    volumes:
+      - homer-data:/www/assets
+    ports:
+      - 8080:8080
+    #environment:
+    #  - UID=1000
+    #  - GID=1000
+    restart: no #unless-stopped
