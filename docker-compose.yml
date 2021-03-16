@@ -187,6 +187,9 @@ services:
     volumes:
       - 'knxd4-data:/etc/knxd/'
     network_mode: host
+    ports:
+      - 6720:6720
+      - 3671:3671
     privileged: true
     environment:
       - UDEV=1
