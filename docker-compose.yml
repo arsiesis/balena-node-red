@@ -182,8 +182,8 @@ services:
 #    ports:
 #      - 6720:6720
 #      - 3671:3671
-    restart: no
-    network_mode: host
+#    restart: no
+#    network_mode: host
   knxd4:
     image: spanghf37/knxd:arm64
     restart: always
