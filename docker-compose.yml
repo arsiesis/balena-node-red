@@ -270,6 +270,7 @@ services:
     container_name: homer
     volumes:
       - homer-data:/www/assets
+    network_mode: host
     ports:
       - 83:80
       - 8080:8080
