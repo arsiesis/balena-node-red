@@ -50,7 +50,7 @@ services:
       - "/dev/ttyACM0:/dev/ttyACM0"   #Port série
       - "/dev/input/by-path/:/dev/input/by-path/"   #pour le noeud clavier avec les noeud gpio
     ports:
-      - 80:80
+      - 81:81
       - 1883:1883
       - 1400:1400
       - 1880:1880
@@ -77,6 +77,7 @@ services:
       - knxd4-data:/data/knxd4-data
       - knxd5-data:/data/knxd5-data
       - homer-data:/data/homer-data
+      - snapdrop-config:/data/snapdrop-config
     ports:
       - "22:22/udp"
       - "22:22/tcp"  
@@ -103,43 +104,43 @@ services:
       - "445:445"
     #  - "445:445/udp"
     restart: no #always
-#  kodi:
-#    build: ./kodi
-#    privileged: true
-#    restart: always
-#    #network_mode: host
-#    volumes:
-#      - 'kodi-data:/data'
-#    ports:
-#      - "8080:8080"
-#      - "9090:9090"
-#    labels:
-#      io.balena.features.kernel-modules: '1'
-#      io.balena.features.firmware: '1'
-#      io.balena.features.dbus: '1'
-#      io.balena.features.supervisor-api: '1'
-#      io.balena.features.balena-api: '1'
-#      io.balena.update.strategy: download-then-kill
-#      io.balena.update.handover-timeout: ''
-#    devices:
-#      - "/dev/input/by-path/:/dev/input/by-path/"   #pour le noeud clavier avec les noeud gpio
-  kodi2:
-    image: rimago/rpi-kodi
-#    user: kodi
-    network_mode: host
-    restart: no
+  kodi:
+    build: ./kodi
     privileged: true
-    devices:
-      - /dev/fb0:/dev/fb0
-      - /dev/vchiq:/dev/vchiq
+    restart: no
+    #network_mode: host
     volumes:
-      - 'kodi2-data:/home/kodi'
+      - 'kodi-data:/data'
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    labels:
+      io.balena.features.kernel-modules: '1'
+      io.balena.features.firmware: '1'
+      io.balena.features.dbus: '1'
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.balena-api: '1'
+      io.balena.update.strategy: download-then-kill
+      io.balena.update.handover-timeout: ''
+    devices:
+      - "/dev/input/by-path/:/dev/input/by-path/"   #pour le noeud clavier avec les noeud gpio
+#  kodi2:
+#    image: rimago/rpi-kodi
+#    user: kodi
+#    network_mode: host
+#    restart: no
+#    privileged: true
+#    devices:
+#      - /dev/fb0:/dev/fb0
+#      - /dev/vchiq:/dev/vchiq
+#    volumes:
+#      - 'kodi2-data:/home/kodi'
 #      - "/etc/timezone:/etc/timezone:ro"
 #      - "/etc/localtime:/etc/localtime:ro"
-    tmpfs:
-      - /tmp
-    environment:
-      - PULSE_SERVER=127.0.0.1
+#    tmpfs:
+#      - /tmp
+#    environment:
+#      - PULSE_SERVER=127.0.0.1
 #  kiosk:
 #    build: ./kiosk
 #    privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
@@ -240,13 +241,13 @@ services:
     image: ghcr.io/linuxserver/snapdrop:arm64v8-latest
     #container_name: snapdrop
     environment:
-      - PUID=1000
-      - PGID=1000
+      #- PUID=1000
+      #- PGID=1000
       - TZ=Europe/London
     volumes:
       - snapdrop-config:/config
     ports:
-      - 81:80
+      - 80:80
       - 443:443
     restart: no #unless-stopped
   heimdall:

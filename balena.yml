@@ -12,7 +12,7 @@ assets:
         url: "https://raw.githubusercontent.com/arsiesis/balena-node-red/75a25ef89a6dfef0fab428e9a0b9ac5bc4ddfc5b/logo.png"
 data:
   applicationEnvironmentVariables:
-    - PORT: 80
+    - PORT: 81
     - USERNAME: "test"
     - PASSWORD: "$2b$08$hKNRG3SOOtmifcUotJoL7.4C9SYrxOY7PdCTGRo8gPB8Quk7htfBy"  #node-red-admin hash-pw         
     - CONSOLE_LOG: "trace"  # fatal < error < warn < info < debug < trace
