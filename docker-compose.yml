@@ -247,7 +247,7 @@ services:
     volumes:
       - snapdrop-config:/config
     ports:
-      - 80:80
+      - 88:88
       - 443:443
     restart: no #unless-stopped
   heimdall:
@@ -261,7 +261,7 @@ services:
       - heimdall-config:/config
     ports:
       - 82:80
-      - 443:443
+      - 445:443
     restart: unless-stopped
   homer:
     #https://github.com/bastienwirtz/homer
