@@ -237,7 +237,7 @@ services:
       - 'droppy-config:/config'
     restart: no #unless-stopped
   snapdrop:
-    image: ghcr.io/linuxserver/snapdrop #:arm64v8-latest
+    image: ghcr.io/linuxserver/snapdrop:arm64v8-latest
     #container_name: snapdrop
     environment:
       - PUID=1000
