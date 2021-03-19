@@ -17,6 +17,7 @@ volumes:
     droppy-data:
     droppy-config:
     snapdrop-config:
+    snapdrop-data:    #attention les mises à jours de ce soft ne s'appliqueront plus si on delete pas les data dans ce dossier
     heimdall-config:
     homer-data:
     ombi-config:
@@ -246,6 +247,7 @@ services:
       - TZ=Europe/London
     volumes:
       - snapdrop-config:/config
+      - snapdrop-data:/app/snapdrop
     ports:
       - 88:88
       - 443:443
