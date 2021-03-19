@@ -249,6 +249,7 @@ services:
     ports:
       - 88:88
       - 443:443
+      - 3000:3000
     restart: no #unless-stopped
   heimdall:
     image: ghcr.io/linuxserver/heimdall:arm64v8-latest
